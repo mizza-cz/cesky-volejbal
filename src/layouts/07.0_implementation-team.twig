@@ -1,5 +1,5 @@
-{% extends "@components/base/base.twig" %} {% set title = "05.0_photogallery" %}
-{% block main %}
+{% extends "@components/base/base.twig" %} {% set title =
+"07.0_implementation-team" %} {% block main %}
 
 <header class="header">
   <div class="header__top">
@@ -201,18 +201,33 @@
       <div class="subPage-grid">
         {% include "@components/aside/asideMenu-repre.twig" %}
         <div class="subPage-content">
-          <h1 class="h1 mb-4">Fotogalerie</h1>
-          <div class="archiveGrid">
-            {% include "@components/post/postAlbum.twig" %}
-            {% include "@components/post/postAlbum.twig" %}
-            {% include "@components/post/postAlbum.twig" %}
-            {% include "@components/post/postAlbum.twig" %}
-            {% include "@components/post/postAlbum.twig" %}
-            {% include "@components/post/postAlbum.twig" %}
-            {% include "@components/post/postAlbum.twig" %}
-            {% include "@components/post/postAlbum.twig" %}
+          <h1 class="h1 mb-4">Realizační tým</h1>
+          <div class="row g-4">
+            <div class="col-lg-4 col-sm-6">
+              <a class="playerItem" href="#">
+                <div class="playerItem__img">
+                  <img src="images/content/ava.jpg" loading="lazy" alt="ava" />
+                </div>
+                <div class="playerItem__content">
+                  <h3 class="h4">Jiří Carba</h3>
+                  <div class="fw-bold">Redakce, web</div>
+                  <div class="p2 text-tertiary">carba@cvf.cz</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              {% include "@components/playerItem/playerItem.twig" %}
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              {% include "@components/playerItem/playerItem.twig" %}
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              {% include "@components/playerItem/playerItem.twig" %}
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              {% include "@components/playerItem/playerItem.twig" %}
+            </div>
           </div>
-          {% include "@components/pagination/pagination.twig" %}
         </div>
       </div>
     </div>

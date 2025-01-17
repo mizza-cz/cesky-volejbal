@@ -110,6 +110,7 @@
     @include media-breakpoint-down(xl) {
       justify-content: space-between;
       padding: 4px 0;
+      gap: 16px;
     }
   }
 }
@@ -321,6 +322,8 @@
     top: 50%;
     transform: translateY(-50%);
     transition: all 0.1s;
+    background-size: contain;
+    background-repeat: no-repeat;
     @include media-breakpoint-down(xl) {
       background-image: url("../images/ico/chevron-right-w.svg");
     }
@@ -419,6 +422,8 @@
       height: 16px;
       transform: rotate(90deg) translateX(-50%);
       top: 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
       background-image: url("../images/ico/chevron-right.svg");
     }
   }

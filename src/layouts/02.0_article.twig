@@ -1,10 +1,24 @@
 {% extends "@components/base/base.twig" %} {% set title = "02.0_article" %} {%
-block main %}
-
-{% include "@components/header/header.twig" %}
+block main %} {% include "@components/header/header.twig" %}
 <main class="main" aria-label="Hlavní obsah">
   {% include "@components/article-section/article-section.twig" %}
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
-{% include "@components/footer/footer.twig" %}
-
-{% endblock %}
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

@@ -1,10 +1,76 @@
 {% extends "@components/base/base.twig" %} {% set title = "01.0_homepage" %} {%
 block main %}
+<div class="topPub">
+  <div class="container">
+    <a class="pub" href="#" target="_blank">
+      <img src="images/content/banner-3.png" loading="lazy" alt="pub" />
+    </a>
+  </div>
+</div>
 
 {% include "@components/header/header.twig" %}
 <main class="main" aria-label="Hlavní obsah">
-  d sads
+  <div class="posts mb-6">
+    <div class="container">
+      <div class="row g-lg-4 g-3">
+        <div class="col-lg-4 col-sm-6">
+          {% include "@components/post/postTag.twig" %}
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          {% include "@components/post/postTag.twig" %}
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          {% include "@components/post/postTag.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
-{% include "@components/footer/footer.twig" %}
-
-{% endblock %}
+<div class="mb-6">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a class="pub" href="#" target="_blank">
+          <img src="images/content/banner-2.png" loading="lazy" alt="pub" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

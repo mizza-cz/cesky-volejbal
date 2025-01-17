@@ -1,10 +1,335 @@
 {% extends "@components/base/base.twig" %} {% set title = "03.0_static" %} {%
 block main %}
 
-{% include "@components/header/header.twig" %}
-<main class="main" aria-label="Hlavní obsah">
-  {% include "@components/article-section/article-section.twig" %}
-</main>
-{% include "@components/footer/footer.twig" %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
 
-{% endblock %}
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">ČVS</div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        {% include "@components/aside/asideMenu-cvs.twig" %}
+        <div class="subPage-content">
+          <h1 class="h1 mb-4">Profil ČVS</h1>
+          <div class="o-content">
+            <p>
+              <strong>
+                Název subjektu je Český volejbalový svaz (dále jen „ČVS"). V
+                anglické verzi se používá název Czech Volleyball Federation. ČVS
+                je spolkem ve smyslu zákona č. 89/2012 Sb., občanský zákoník, v
+                platném znění. ČVS je právnickou osobou (IČ 00540285), která
+                svoji činnost vykonává v souladu s právními předpisy České
+                republiky. Sídlem ČVS je Praha.
+              </strong>
+            </p>
+            <p>
+              Český volejbalový svaz je jediným subjektem uznaným Ministerstvem
+              školství, mládeže a tělovýchovy České republiky a Českým
+              olympijským výborem a současně jediným garantem rozvoje volejbalu
+              pověřeným řízením volejbalu a beachvolejbalu (dále jen
+              „volejbalu") na území České republiky. ČVS je zakládajícím členem
+              mezinárodních volejbalových organizací: Mezinárodní volejbalové
+              federace (dále jen „FIVB") a Evropské volejbalové konfederace
+              (dále jen „CEV"). Jejich základní dokumenty jsou východiskem pro
+              činnost ČVS a musí být respektovány i jakoukoliv třetí stranou
+              podílející se v součinnosti s ČVS na rozvoji volejbalu v České
+              republice. Na území České republiky jsou celostátní orgány ČVS
+              (konference ČVS, výbor ČVS, správní rada ČVS) oprávněny rozhodnout
+              o případných odlišnostech směrnic ČVS oproti dokumentům FIVB a
+              CEV. ČVS je jediným představitelem českého volejbalu v těchto
+              mezinárodních organizacích.
+            </p>
+            <p>
+              Účelem (hlavní činností, posláním) ČVS je vytváření podmínek pro
+              rozvoj všech forem a výkonnostních úrovní volejbalu a
+              beachvolejbalu včetně masového a rekreačního. ČVS zabezpečuje
+              státní reprezentaci a podporuje reprezentaci oddílovou. Účelem
+              (hlavní činností, posláním) ČVS je dále v rozsahu své působnosti
+              chránit práva svých členů, školit, doškolovat a zabezpečovat
+              vzdělávání trenérů, rozhodčích, školitelů a dalších odborných
+              volejbalových funkcionářů, zavádět moderní technologie do
+              tréninkových a vzdělávacích procesů a do organizace a řízení
+              soutěží.
+            </p>
+            <p>
+              ČVS je výhradním majitelem, zřizovatelem a organizátorem
+              volejbalových soutěží a akcí na území České republiky, které řídí
+              svými orgány všech úrovní v duchu dokumentů FIVB a CEV a na
+              základě směrnic ČVS. Český volejbalový svaz může být sdružen v
+              jiné organizaci s právem kdykoli z ní vystoupit. O začlenění nebo
+              o vystoupení rozhoduje výbor ČVS.
+            </p>
+            <p>
+              ČVS může za účelem zajištění materiálních a finančních prostředků
+              pro rozvoj volejbalu vyvíjet také vedlejší hospodářskou činnost,
+              může zakládat obchodní Číslo 00/2015 „Stanovy Českého
+              volejbalového svazu“ Strana 3 společnost a vstupovat do obchodních
+              společností a jiných organizací. Tyto činnosti může vykonávat
+              pouze v souladu s právními předpisy České republiky. 8.
+              Jednotlivým subjektům sdruženým v ČVS náleží všechna individuální
+              práva vycházející z jejich základního poslání s výjimkou oprávnění
+              uvedených v odstavci 4. tohoto článku a v článku 22, pokud nebude
+              smluvně sjednáno nebo směrnicí ČVS stanoveno jinak.
+            </p>
+            <img src="images/content/article.png" loading="lazy" alt="" />
+            <p>
+              Účelem (hlavní činností, posláním) ČVS je vytváření podmínek pro
+              rozvoj všech forem a výkonnostních úrovní volejbalu a
+              beachvolejbalu včetně masového a rekreačního. ČVS zabezpečuje
+              státní reprezentaci a podporuje reprezentaci oddílovou. Účelem
+              (hlavní činností, posláním) ČVS je dále v rozsahu své působnosti
+              chránit práva svých členů, školit, doškolovat a zabezpečovat
+              vzdělávání trenérů, rozhodčích, školitelů a dalších odborných
+              volejbalových funkcionářů, zavádět moderní technologie do
+              tréninkových a vzdělávacích procesů a do organizace a řízení
+              soutěží.
+            </p>
+            <ol>
+              <li>Lorem ipsum</li>
+              <li><a href="#">Lorem ipsum </a></li>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+            </ol>
+            <p>
+              ČVS je výhradním majitelem, zřizovatelem a organizátorem
+              volejbalových soutěží a akcí na území České republiky, které řídí
+              svými orgány všech úrovní v duchu dokumentů FIVB a CEV a na
+              základě směrnic ČVS. Český volejbalový svaz může být sdružen v
+              jiné organizaci s právem kdykoli z ní vystoupit. O začlenění nebo
+              o vystoupení rozhoduje výbor ČVS.
+            </p>
+           
+            <ul>
+              <li>Lorem ipsum</li>
+              <li><a href="#">Lorem ipsum </a></li>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+            </ul>
+            <p>
+              ČVS může za účelem zajištění materiálních a finančních prostředků
+              pro rozvoj volejbalu vyvíjet také vedlejší hospodářskou činnost,
+              může zakládat obchodní Číslo 00/2015 „Stanovy Českého
+              volejbalového svazu“ Strana 3 společnost a vstupovat do obchodních
+              společností a jiných organizací. Tyto činnosti může vykonávat
+              pouze v souladu s právními předpisy České republiky. 8.
+              Jednotlivým subjektům sdruženým v ČVS náleží všechna individuální
+              práva vycházející z jejich základního poslání s výjimkou oprávnění
+              uvedených v odstavci 4. tohoto článku a v článku 22, pokud nebude
+              smluvně sjednáno nebo směrnicí ČVS stanoveno jinak.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

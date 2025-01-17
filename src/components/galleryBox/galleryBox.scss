@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   &__item {
     width: 100%;
     display: block;
@@ -9,6 +12,9 @@
     aspect-ratio: 286/191;
     overflow: hidden;
     &:hover {
+      .galleryBox__count .link::after {
+        width: calc(100% - 24px);
+      }
       img {
         transform: scale(1.1);
       }
@@ -18,6 +24,27 @@
       height: 100%;
       object-fit: cover;
       transition: all 0.3s;
+    }
+  }
+}
+
+.galleryBox__count {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary-80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-light);
+  .link {
+    display: block;
+    @include media-breakpoint-down(sm) {
+      display: none;
     }
   }
 }
