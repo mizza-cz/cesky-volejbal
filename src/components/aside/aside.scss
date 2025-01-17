@@ -1,0 +1,123 @@
+.asideNav .SubMenu {
+  display: none;
+}
+.SubMenu.is-active {
+  animation-direction: alternate;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: fadeInDownSubMenu;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+
+.asideMenu {
+  width: 22.8rem;
+  background-color: var(--color-light);
+
+  @include media-breakpoint-down(xl) {
+    position: absolute;
+    right: 1px;
+    z-index: 99;
+    top: -31px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    width: fit-content;
+    min-width: 18rem;
+  }
+}
+.openSubMenu .asideMenu {
+  visibility: visible;
+  opacity: 1;
+}
+.asideNav {
+  &-title {
+    padding: 24px 32px 16px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border-radius: 6px 6px 0 0;
+    @include media-breakpoint-down(lg) {
+      padding: 16px 24px 12px;
+    }
+  }
+  &-menu {
+    border: 0 2px 2px 2px solid var(--color-line);
+    box-shadow: 0px 16px 32px 0px rgba(16, 24, 40, 0.05);
+    border-radius: 0 0 6px 6px;
+  }
+  &-item {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-line);
+    }
+  }
+  &-item.is-active {
+    background-color: var(--color-line);
+  }
+  &-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+    text-decoration: none;
+    padding: 14px 48px 12px 32px;
+    display: block;
+    transition: all 0.3s;
+    position: relative;
+    @include media-breakpoint-down(xl) {
+      padding: 8px 36px 8px 24px;
+    }
+    &:hover {
+      background-color: var(--color-line);
+    }
+  }
+}
+.SubMenu-link.js-subMenu-toggle::before,
+.asideNav-link.js-subMenu-toggle::before {
+  background-color: transparent;
+  background-image: url("../images/ico/chevron-right.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  @include media-breakpoint-down(xl) {
+    right: 1rem;
+  }
+}
+.SubMenu-link.js-subMenu-toggle.is-active::before,
+.asideNav-link.js-subMenu-toggle.is-active::before {
+  transform: rotate(-90deg) translateX(50%);
+}
+.SubMenu {
+  &-link {
+    padding: 12px 48px 12px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+    color: var(--color-primary);
+    display: block;
+    position: relative;
+    text-decoration-color: transparent;
+    @include media-breakpoint-down(xl) {
+      padding: 8px 36px 8px 32px;
+    }
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+}
+
+.asideNav-link.active,
+.SubMenu-link.active {
+  background-color: var(--color-line);
+}
+.SubMenu-link.active {
+  text-decoration-color: inherit;
+}

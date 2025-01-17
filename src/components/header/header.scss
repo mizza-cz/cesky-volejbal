@@ -1,0 +1,428 @@
+.header {
+  position: relative;
+  z-index: 99999;
+  .container {
+    max-width: 1920px !important;
+    padding: 0 24px !important;
+    @include media-breakpoint-down(xl) {
+      padding: 0 16px !important;
+    }
+  }
+  &__search {
+    width: 22px;
+    height: 22px;
+    display: block;
+    transition: all 0.3s;
+    margin-left: auto;
+    &:hover {
+      transform: scale(1.1);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__logo {
+    width: 166px;
+    height: 59px;
+    display: block;
+    @include media-breakpoint-down(xl) {
+      width: 8rem;
+      height: 46px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__top {
+    background-color: var(--color-primary);
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+  &__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+  }
+  &__assn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    a {
+      display: block;
+      max-width: 48px;
+      height: 17px;
+      transition: all 0.3s;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__media {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    a {
+      font-size: 16px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      color: var(--color-light);
+      text-decoration-color: transparent;
+      &:hover {
+        text-decoration-color: inherit;
+      }
+      img {
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+      }
+    }
+  }
+  &__bottom {
+    border-bottom: 2px solid var(--color-line);
+  }
+  &__bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    @include media-breakpoint-down(xl) {
+      justify-content: space-between;
+      padding: 4px 0;
+    }
+  }
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+}
+.navbar {
+  @include media-breakpoint-down(xl) {
+    opacity: 0;
+
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.3s ease-out;
+    right: 0px;
+    z-index: 99999;
+    top: calc(100% + 1px);
+    width: calc(100% + 32px);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px 16px;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    left: -16px;
+    border-bottom: 4px solid var(--color-secondary);
+  }
+  .header__links {
+    display: none;
+    @include media-breakpoint-down(xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+  .social {
+    display: none;
+    @include media-breakpoint-down(xl) {
+      display: flex;
+      padding-bottom: 8px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+      height: auto;
+      padding-left: 0;
+      width: 100%;
+    }
+    &-list {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      transition: all 0.3s;
+
+      &:last-child .navbar__menu-item {
+        border-right: 1px solid var(--color-line);
+        @include media-breakpoint-down(xl) {
+          display: none;
+        }
+      }
+      @include media-breakpoint-down(xl) {
+        width: 100%;
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &.active {
+        .dropdown-menu {
+          @include media-breakpoint-down(xl) {
+            height: 100%;
+            display: block;
+            position: static;
+          }
+        }
+      }
+      &.active {
+        .navbar__menu-item {
+          background-color: var(--color-secondary);
+          color: var(--color-light);
+          border-color: var(--color-secondary);
+        }
+
+        .dropdown-menu {
+          transition: all 0.8s;
+          display: block;
+          z-index: 28;
+        }
+      }
+    }
+    &-item {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+      color: var(--color-dark);
+      transition: all 0.3s;
+      position: relative;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      text-transform: uppercase;
+      border-left: 1px solid var(--color-line);
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 4px;
+      @include media-breakpoint-down(xl) {
+        border-left: none;
+        border-bottom: 1px solid var(--color-line);
+        color: var(--color-light);
+      }
+      &:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-light);
+        border-color: var(--color-secondary);
+      }
+      @include media-breakpoint-down(xl) {
+        text-align: center;
+        margin: 0 auto;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 33;
+  width: max-content;
+  background-color: var(--color-light);
+  top: calc(100% + 2px);
+  min-width: 200px;
+  padding: 8px 24px;
+  border-bottom: 2px solid var(--color-secondary);
+  box-shadow: 0px 0px 20px 0px rgba(16, 24, 40, 0.05);
+
+  @include media-breakpoint-down(xl) {
+    width: 100%;
+    padding-bottom: 0;
+    box-shadow: none;
+    background-color: var(--color-primary);
+  }
+  &__list {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    &:last-child a {
+      border-bottom: none;
+    }
+    a {
+      display: block;
+      width: 100%;
+      padding: 10px 0px 6px;
+      color: var(--color-dark);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-line);
+      @include media-breakpoint-down(xl) {
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+        color: var(--color-light);
+      }
+      &:hover {
+        color: var(--color-primary);
+        @include media-breakpoint-down(xl) {
+          color: var(--color-light);
+        }
+      }
+    }
+  }
+}
+.dropdown-submenu {
+  display: none !important;
+  left: calc(100% + 24px) !important;
+  top: 0;
+  position: absolute;
+  li:last-child a {
+    border-bottom: none;
+  }
+}
+
+.dropdown-submenu.show {
+  display: block !important;
+}
+.dropdown-item.dropdown-toggle {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0;
+    background-image: url("../images/ico/chevron-right.svg");
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.1s;
+    @include media-breakpoint-down(xl) {
+      background-image: url("../images/ico/chevron-right-w.svg");
+    }
+  }
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--color-primary);
+  @include media-breakpoint-down(xl) {
+    color: var(--color-light);
+  }
+}
+.dropdown-item.dropdown-toggle.show::before {
+  transform: rotate(90deg) translateY(-20%) translateX(-50%);
+}
+.dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+#mobile-search {
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  max-width: 400px;
+  width: 100%;
+  @include media-breakpoint-down(xl) {
+    max-width: 100%;
+  }
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-light);
+    border-bottom: 2px solid var(--color-line);
+    box-shadow: 0px 0px 20px 0px rgba(16, 24, 40, 0.05);
+    padding: 20px;
+  }
+  input {
+    display: block;
+    border: 1px solid var(--color-primary);
+    height: 40px;
+    padding: 0 16px;
+    color: var(--color-dark);
+    outline: none;
+    width: 100%;
+
+    &::placeholder {
+      color: var(--color-dark);
+    }
+  }
+  button {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-weight: 700;
+    display: block;
+    border: none;
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-light);
+    }
+  }
+}
+.is-nav-open .navbar {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+  z-index: 999;
+  display: flex;
+}
+
+#subMenuBtn {
+  display: none;
+  @include media-breakpoint-down(xl) {
+    display: flex;
+    padding-right: 24px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      transform: rotate(90deg) translateX(-50%);
+      top: 50%;
+      background-image: url("../images/ico/chevron-right.svg");
+    }
+  }
+  &.active:before {
+    transform: rotate(-90deg) translateX(50%);
+  }
+}

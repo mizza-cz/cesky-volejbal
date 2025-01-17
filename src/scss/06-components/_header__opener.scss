@@ -1,0 +1,60 @@
+.c-header__opener {
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s;
+  display: none;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  z-index: 999;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  @include media-breakpoint-down(xl) {
+    display: flex;
+  }
+  span {
+    width: 24px;
+    height: 3px;
+    background: var(--color-secondary);
+    transform: translateY(-1px);
+    display: block;
+    transition: all 0.3s;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 3px;
+      background: var(--color-secondary);
+      left: 0;
+      right: 0;
+      transition: all 0.3s;
+    }
+    &::before {
+      transform: translateY(-7px);
+    }
+    &::after {
+      transform: translateY(7px);
+    }
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+.c-header__opener.is-open {
+  span {
+    border-color: var(--color-light);
+    background: var(--color-light);
+  }
+  span:before {
+    transform: rotate(45deg);
+    background-color: var(--color-secondary);
+  }
+  span:after {
+    transform: rotate(-45deg);
+    background-color: var(--color-secondary);
+  }
+}

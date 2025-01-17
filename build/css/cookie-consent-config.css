@@ -1,0 +1,66 @@
+/** Light color-scheme **/
+:root {
+  /* color settings */
+  --cc-accent: #00257a;
+  --cc-accent-hover: #001c5c;
+
+  --cc-bg: #fff;
+  --cc-text: #121619;
+  --cc-btn-primary-bg: var(--cc-accent);
+  --cc-btn-primary-text: var(--cc-bg);
+  --cc-btn-primary-hover-bg: var(--cc-accent-hover);
+  --cc-btn-secondary-bg: var(--cc-btn-primary-bg);
+  --cc-btn-secondary-text: var(--cc-bg);
+  --cc-btn-secondary-hover-bg: var(--cc-btn-primary-hover-bg);
+  --cc-toggle-bg-off: #919ea6;
+  --cc-toggle-bg-on: var(--cc-btn-primary-bg);
+  --cc-toggle-bg-readonly: #d5dee2;
+  --cc-toggle-knob-bg: #fff;
+  --cc-toggle-knob-icon-color: #ecf2fa;
+  --cc-block-text: var(--cc-text);
+  --cc-cookie-category-block-bg: #f0f4f7;
+  --cc-cookie-category-block-bg-hover: #e9eff4;
+  --cc-section-border: #f1f3f5;
+  --cc-cookie-table-border: #e9edf2;
+  --cc-overlay-bg: rgba(4, 6, 8, 0.85);
+  --cc-webkit-scrollbar-bg: #cfd5db;
+  --cc-webkit-scrollbar-bg-hover: #9199a0;
+  --cc-placeholder-bg: rgb(153, 153, 153);
+  --cc-placeholder-color: rgb(0, 0, 0);
+}
+
+/** Dark color-scheme **/
+.c_darkmode {
+  --cc-bg: #181b1d;
+  --cc-text: #d8e5ea;
+  --cc-btn-primary-bg: #33383c;
+  --cc-btn-primary-text: var(--cc-text);
+  --cc-btn-primary-hover-bg: #3e454a;
+  --cc-btn-secondary-bg: var(--cc-btn-primary-bg);
+  --cc-btn-secondary-text: var(--cc-bg);
+  --cc-btn-secondary-hover-bg: var(--cc-btn-primary-hover-bg);
+  --cc-toggle-bg-off: #667481;
+  --cc-toggle-bg-on: var(--cc-btn-primary-bg);
+  --cc-toggle-bg-readonly: #454c54;
+  --cc-toggle-knob-bg: var(--cc-cookie-category-block-bg);
+  --cc-toggle-knob-icon-color: var(--cc-bg);
+  --cc-block-text: #b3bfc5;
+  --cc-cookie-category-block-bg: #23272a;
+  --cc-cookie-category-block-bg-hover: #2b3035;
+  --cc-section-border: #292d31;
+  --cc-cookie-table-border: #2b3035;
+  --cc-webkit-scrollbar-bg: #667481;
+  --cc-webkit-scrollbar-bg-hover: #9199a0;
+}
+
+[data-cookie-placeholder=""] {
+  background: none;
+}
+[data-cookie-placeholder]::after {
+  background: var(--cc-placeholder-bg);
+  color: var(--cc-placeholder-color);
+}
+[data-cookie-placeholder] * {
+  visibility: hidden;
+  z-index: -1;
+}

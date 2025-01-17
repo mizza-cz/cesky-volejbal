@@ -1,0 +1,62 @@
+.post {
+  display: block;
+  text-decoration: none;
+  &:hover {
+    .h4,
+    .h3 {
+      text-decoration-color: inherit;
+    }
+  }
+  &__count {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-primary);
+    gap: 4px;
+    padding: 8px 24px;
+    color: var(--color-light);
+    font-weight: 700;
+    line-height: 16px;
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+  &__img {
+    width: 100%;
+    aspect-ratio: 464/316;
+    position: relative;
+
+    .tag {
+      position: absolute;
+      bottom: 16px;
+      left: 32px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .h4,
+  .h3 {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s;
+  }
+  .h3 {
+    margin-bottom: 12px;
+  }
+  p {
+    -webkit-line-clamp: 3;
+    max-height: calc(1.5em * 3);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+}

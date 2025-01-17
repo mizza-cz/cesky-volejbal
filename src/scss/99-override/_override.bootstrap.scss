@@ -1,0 +1,47 @@
+/*! purgecss start ignore */
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+.text-tertiary {
+  color: var(--color-tertiary);
+}
+
+.container {
+  max-width: 1536px !important;
+  padding: 0 20px !important;
+  margin: 0 auto;
+  @include media-breakpoint-down(lg) {
+    padding: 0 16px !important;
+  }
+}
+.g-6 {
+  --bs-gutter-y: 48px;
+  --bs-gutter-x: 48px;
+  @include media-breakpoint-down(xl) {
+    --bs-gutter-y: 32px;
+    --bs-gutter-x: 32px;
+  }
+}
+.mb-6 {
+  margin-bottom: 48px;
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 32px;
+  }
+}
+.mt-5 {
+  margin-top: 40px !important;
+}
+.mb-5 {
+  margin-bottom: 40px !important;
+}
+.mt-lg-6 {
+  margin-top: 48px;
+  @include media-breakpoint-down(xl) {
+    margin-top: 32px;
+  }
+}
+/*! purgecss end ignore */

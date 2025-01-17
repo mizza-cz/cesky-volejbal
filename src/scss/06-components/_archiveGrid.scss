@@ -1,0 +1,14 @@
+.archiveGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  @include media-breakpoint-only(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-breakpoint-only(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

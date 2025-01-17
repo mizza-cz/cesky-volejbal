@@ -1,0 +1,22 @@
+.article-section {
+  &__img {
+    margin-bottom: 48px;
+  }
+}
+.article {
+  max-width: 1366px;
+  margin: 0 auto 48px;
+  display: flex;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 2px solid var(--color-line);
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  &-content {
+    flex: 1;
+  }
+  &-aside {
+    width: 22.8rem;
+  }
+}

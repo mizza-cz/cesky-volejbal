@@ -1,0 +1,10 @@
+{% extends "@components/base/base.twig" %} {% set title = "03.0_static" %} {%
+block main %}
+
+{% include "@components/header/header.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  {% include "@components/article-section/article-section.twig" %}
+</main>
+{% include "@components/footer/footer.twig" %}
+
+{% endblock %}

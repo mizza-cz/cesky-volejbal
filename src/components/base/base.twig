@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="cs-CZ">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }} - {{ project }}</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <!--****** Styles  ******-->
+    <link rel="stylesheet" href="css/cookie-consent-config.css" />
+    <link rel="stylesheet" href="css/cookie-consent.min.css" />
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="stylesheet" media="screen, handheld" href="css/styles.css" />
+    <link rel="stylesheet" media="print" href="css/prints.css" />
+    <!--****** Styles  ******-->
+
+    <!--****** Scripts  ******-->
+    <script>
+      const isLocalhost = window.location.hostname.includes("localhost");
+    </script>
+    <link
+      rel="preload"
+      href="https://code.jquery.com/jquery-3.6.0.min.js"
+      as="script"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      as="script"
+      crossorigin
+    />
+    <script src="js/cookie-consent.min.js" defer="defer"></script>
+
+    <link rel="preload" href="js/scripts.js" as="script" />
+
+    <!-- ****** scripts ****** -->
+  </head>
+  <body>
+    <div class="base">{% block main %} {% endblock %}</div>
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/scripts.js"></script>
+  </body>
+</html>

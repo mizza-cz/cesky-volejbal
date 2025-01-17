@@ -1,0 +1,24 @@
+.subPage {
+  margin-top: 48px;
+  position: relative;
+  margin-bottom: 48px;
+  @include media-breakpoint-down(xl) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  &-grid {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    padding-bottom: 48px;
+    border-bottom: 2px solid var(--color-line);
+    gap: 48px;
+    @include media-breakpoint-down(xl) {
+      padding-bottom: 32px;
+    }
+  }
+  &-content {
+    flex: 1;
+  }
+}
