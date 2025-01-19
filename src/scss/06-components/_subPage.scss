@@ -21,4 +21,61 @@
   &-content {
     flex: 1;
   }
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+}
+
+.subPageFilter {
+  display: flex;
+  align-items: center;
+  gap: 24px 32px;
+  flex-wrap: wrap;
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 24px;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: block;
+    text-decoration-color: transparent;
+    &:hover {
+      text-decoration-color: inherit;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      background-color: var(--color-light);
+      border: 1px solid var(--color-primary);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__link.active {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10.5px;
+      height: 10.5px;
+      background-color: var(--color-primary);
+      left: 3.5px;
+    }
+  }
 }

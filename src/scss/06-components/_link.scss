@@ -6,6 +6,7 @@
   color: var(--color-primary);
   padding-right: 24px;
   padding-bottom: 1px;
+  text-decoration: none;
   &::after {
     content: "";
     position: absolute;
@@ -25,8 +26,18 @@
     width: 16px;
     height: 16px;
     background-image: url("../images/ico/arrow-right-w.svg");
-    background-size: contain;
+
     background-repeat: no-repeat;
+    background-position: center right;
+  }
+}
+a.link {
+  &::after {
+    background-color: var(--color-primary);
+  }
+  &::before {
+    background-size: 10px;
+    background-image: url("../images/ico/arrow-right-b.svg");
   }
 }
 a.link:hover::after {
