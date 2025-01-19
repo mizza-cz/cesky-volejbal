@@ -60,3 +60,29 @@
     margin-bottom: 12px;
   }
 }
+
+.postVideo {
+  .post__img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 76px;
+    height: 76px;
+    background-image: url("../images/ico/play-video.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .post__img::before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--color-primary-50);
+  }
+}
