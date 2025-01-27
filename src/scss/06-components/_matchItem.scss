@@ -91,6 +91,7 @@
     gap: 16px;
     max-width: 14rem;
     width: 100%;
+    min-width: 14rem;
     color: var(--color-primary);
     @include media-breakpoint-down(lg) {
       max-width: 100%;
