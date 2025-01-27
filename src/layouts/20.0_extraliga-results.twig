@@ -201,55 +201,488 @@
       <div class="subPage-grid">
         {% include "@components/aside/asideMenu-extraliga.twig" %}
         <div class="subPage-content">
-          <div class="matchDetail">
-            <ul class="matchDetail-head">
-              <li class="matchDetail-head__item">
-                <img src="images/ico/trophy.svg" loading="lazy" alt="icon" />
-                <strong> Soutěž: </strong>
-                ČEZ Extraliga muži, 12. kolo
-              </li>
-              <li class="matchDetail-head__item">
-                <img src="images/ico/calendar.svg" loading="lazy" alt="icon" />
-                <strong> Datum a čas: </strong>
-                24. 11. 2024, 12:00
-              </li>
-              <li class="matchDetail-head__item">
-                <img src="images/ico/marker.svg" loading="lazy" alt="icon" />
-                <strong> Místo konání: </strong>
-                Starez Aréna Vodova, Brno (296 diváků)
-              </li>
-              <li class="matchDetail-head__item">
-                <img
-                  src="images/ico/rozhodci-b.svg"
-                  loading="lazy"
-                  alt="icon"
-                />
-                <strong> Rozhodčí: </strong>
-                Dušan Rychlík, Tomáš Buchar, Václav Červený, Jiří Ibl
-              </li>
-            </ul>
-            <div class="matchDetail__content">
-              <div class="matchDetail__team">
-                <h3 class="h3">VK Jihostroj České Budějovice</h3>
-                <img
-                  src="images/content/club-1.png"
-                  loading="lazy"
-                  alt="club"
-                />
-              </div>
-              <div class="matchDetail__result">-:-</div>
-              <div class="matchDetail__team">
-                <img
-                  src="images/content/club-2.png"
-                  loading="lazy"
-                  alt="club"
-                />
-                <h3 class="h3">Kladno volejbal cz</h3>
+          <div class="subPage-menu">
+            <h1 class="h1">Výsledky</h1>
+            <div class="subPageFilter">
+              <div class="d-flex gap-3 flex-wrap">
+                <label class="o-select subPageFilter__select">
+                  <select class="js-select">
+                    <option>Zápasy dle týmu</option>
+                    <option>team 1</option>
+                    <option>team 2</option>
+                    <option>team 3</option>
+                    <option>team 4</option>
+                    <option>team 5</option>
+                  </select>
+                </label>
+                <label class="o-select subPageFilter__select">
+                  <select class="js-select">
+                    <option>Zápasy dle kola</option>
+                    <option>Kolo 1</option>
+                    <option>Kolo 2</option>
+                    <option>Kolo 3</option>
+                    <option>Kolo 4</option>
+                    <option>Kolo 5</option>
+                  </select>
+                </label>
               </div>
             </div>
-            <p class="p2 text-primary text-center">
-              25:21, 26:28, 25:16, 22:25, 12:15
-            </p>
+          </div>
+          <h3 class="h3">1. kolo</h3>
+          <div class="matchItems">
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>so 26. 10. 2024</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-1.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-2.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">VK Jihostroj České Budějovice</h4>
+                  <h4 class="h6">Kladno volejbal cz</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-1.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>stř 31. 12. 2025</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-3.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-4.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">AERO Odolena Voda</h4>
+                  <h4 class="h6">Black Volley Beskydy</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-2.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>so 26. 10. 2024</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-1.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-2.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">VK Jihostroj České Budějovice</h4>
+                  <h4 class="h6">Kladno volejbal cz</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span></span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>stř 31. 12. 2025</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-3.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-4.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">AERO Odolena Voda</h4>
+                  <h4 class="h6">Black Volley Beskydy</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+          </div>
+          <h3 class="h3">2. kolo</h3>
+          <div class="matchItems">
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>so 26. 10. 2024</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-1.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-2.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">VK Jihostroj České Budějovice</h4>
+                  <h4 class="h6">Kladno volejbal cz</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-1.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>stř 31. 12. 2025</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-3.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-4.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">AERO Odolena Voda</h4>
+                  <h4 class="h6">Black Volley Beskydy</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-2.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>so 26. 10. 2024</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-1.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-2.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">VK Jihostroj České Budějovice</h4>
+                  <h4 class="h6">Kladno volejbal cz</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-1.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22 )</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>stř 31. 12. 2025</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-3.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-4.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">AERO Odolena Voda</h4>
+                  <h4 class="h6">Black Volley Beskydy</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-2.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+          </div>
+          <h3 class="h3">3. kolo</h3>
+          <div class="matchItems">
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>so 26. 10. 2024</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-1.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-2.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">VK Jihostroj České Budějovice</h4>
+                  <h4 class="h6">Kladno volejbal cz</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-1.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>stř 31. 12. 2025</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-3.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-4.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">AERO Odolena Voda</h4>
+                  <h4 class="h6">Black Volley Beskydy</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-2.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">3:2</div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>so 26. 10. 2024</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-1.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-2.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">VK Jihostroj České Budějovice</h4>
+                  <h4 class="h6">Kladno volejbal cz</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-1.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
+            <div class="matchItem">
+              <div class="matchItem-left">
+                <div class="matchItem__date">
+                  <p>
+                    <strong>stř 31. 12. 2025</strong>
+                  </p>
+                  <p>18:00 hod.</p>
+                </div>
+                <div class="matchItem__logos">
+                  <img
+                    src="images/content/club-3.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                  <img
+                    src="images/content/club-4.png"
+                    loading="lazy"
+                    alt="club"
+                  />
+                </div>
+                <div class="matchItem__teams">
+                  <h4 class="h6">AERO Odolena Voda</h4>
+                  <h4 class="h6">Black Volley Beskydy</h4>
+                </div>
+              </div>
+              <div class="matchItem-right">
+                <a href="#" target="_blank" class="matchItem__media">
+                  <img src="images/content/tv-2.png" loading="lazy" alt="tv" />
+                </a>
+                <div class="matchItem__referees">
+                  <div class="h2">
+                    3:2
+                    <span>(-22, -19, 25, 22, -8)</span>
+                  </div>
+                </div>
+                <a href="#" class="link"> Detail zápasu </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
