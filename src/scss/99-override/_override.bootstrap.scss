@@ -9,6 +9,9 @@
 .text-tertiary {
   color: var(--color-tertiary);
 }
+.text-light {
+  color: var(--color-light) !important;
+}
 
 .container {
   max-width: 1536px !important;
