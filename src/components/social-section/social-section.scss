@@ -1,0 +1,40 @@
+.social-section {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    @include media-breakpoint-down(lg) {
+      gap: 32px 24px;
+    }
+    @include media-breakpoint-down(sm) {
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--color-primary);
+    text-decoration-color: transparent;
+    min-width: 180px;
+    @include media-breakpoint-down(lg) {
+      min-width: 120px;
+    }
+    &:hover {
+      text-decoration-color: inherit;
+    }
+
+    img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      @include media-breakpoint-down(lg) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

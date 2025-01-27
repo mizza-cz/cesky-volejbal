@@ -1,0 +1,281 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"19.0_extraliga-program" %} {% block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Extraliga</div>
+      </div>
+    </div>
+  </div>
+</header>
+{% include "@components/scoreboard/scoreboard.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        {% include "@components/aside/asideMenu-extraliga.twig" %}
+        <div class="subPage-content">
+          <div class="subPage-menu">
+            <h1 class="h1">Program</h1>
+            <div class="subPageFilter">
+              <div class="d-flex gap-3 flex-wrap">
+                <label class="o-select subPageFilter__select">
+                  <select class="js-select">
+                    <option>Zápasy dle týmu</option>
+                    <option>team 1</option>
+                    <option>team 2</option>
+                    <option>team 3</option>
+                    <option>team 4</option>
+                    <option>team 5</option>
+                  </select>
+                </label>
+                <label class="o-select subPageFilter__select">
+                  <select class="js-select">
+                    <option>Zápasy dle kola</option>
+                    <option>Kolo 1</option>
+                    <option>Kolo 2</option>
+                    <option>Kolo 3</option>
+                    <option>Kolo 4</option>
+                    <option>Kolo 5</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+          <h3 class="h3">1. kolo</h3>
+          <div class="matchItem">
+            <div class="row">
+              <div class="col">
+                <p>
+                  <strong>so 26. 10. 2024</strong>
+                </p>
+                <p>18:00 hod.</p>
+              </div>
+              <div class="col matchItem__logos">
+                <img
+                  src="images/content/club-1.png"
+                  loading="lazy"
+                  alt="club"
+                />
+                <img
+                  src="images/content/club-2.png"
+                  loading="lazy"
+                  alt="club"
+                />
+              </div>
+              <div class="col-4">
+                <h4 class="h6">VK Jihostroj České Budějovice</h4>
+                <h4 class="h6">Kladno volejbal cz</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

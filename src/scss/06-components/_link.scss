@@ -7,6 +7,7 @@
   padding-right: 24px;
   padding-bottom: 1px;
   text-decoration: none;
+  font-weight: 400;
   &::after {
     content: "";
     position: absolute;
@@ -42,4 +43,15 @@ a.link {
 }
 a.link:hover::after {
   width: calc(100% - 24px);
+}
+
+.link.link--light {
+  color: var(--color-light);
+  &::after {
+    background-color: var(--color-light);
+  }
+  &::before {
+    background-size: contain;
+    background-image: url("../images/ico/arrow-right-w.svg");
+  }
 }

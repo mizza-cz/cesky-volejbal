@@ -10,9 +10,32 @@ block main %}
 
 {% include "@components/header/header.twig" %}
 <main class="main" aria-label="Hlavní obsah">
+  {% include "@components/topstory/topstory.twig" %}
   <div class="posts mb-6">
     <div class="container">
-      <div class="row g-lg-4 g-3">
+      <div class="row g-4 mb-6">
+        <div class="col-lg-3 col-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-3 col-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-3 col-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-3 col-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+      <div class="row g-lg-4 g-3 mb-4">
         <div class="col-lg-4 col-sm-6">
           {% include "@components/post/postTag.twig" %}
         </div>
@@ -23,8 +46,12 @@ block main %}
           {% include "@components/post/postTag.twig" %}
         </div>
       </div>
+      <a class="pub" href="#" target="_blank">
+        <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+      </a>
     </div>
   </div>
+  {% include "@components/videosTV/videosTV.twig" %}
 </main>
 <div class="mb-6">
   <div class="container">

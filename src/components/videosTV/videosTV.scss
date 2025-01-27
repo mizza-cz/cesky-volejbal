@@ -1,0 +1,27 @@
+.videosTV {
+  background-color: var(--color-primary);
+  padding: 48px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 32px 0;
+  }
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .post .h4 {
+    color: var(--color-light);
+  }
+  &__logo {
+    width: 180px;
+    height: 42px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
