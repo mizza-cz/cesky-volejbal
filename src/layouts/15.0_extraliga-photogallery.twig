@@ -201,7 +201,21 @@
       <div class="subPage-grid">
         {% include "@components/aside/asideMenu-extraliga.twig" %}
         <div class="subPage-content">
-          <h1 class="h1 mb-4">Fotogalerie</h1>
+          <div class="subPage-menu">
+            <h1 class="h1">Fotogalerie</h1>
+            <div class="subPageFilter">
+              <label class="o-select subPageFilter__select">
+                <select class="js-select">
+                  <option>2025</option>
+                  <option>2024</option>
+                  <option>2023</option>
+                  <option>2022</option>
+                  <option>2021</option>
+                  <option>2020</option>
+                </select>
+              </label>
+            </div>
+          </div>
           <div class="archiveGrid">
             {% include "@components/post/postAlbum.twig" %} {% include
             "@components/post/postAlbum.twig" %} {% include

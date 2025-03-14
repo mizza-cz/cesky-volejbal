@@ -55,3 +55,9 @@ a.link:hover::after {
     background-image: url("../images/ico/arrow-right-w.svg");
   }
 }
+.link.link-download {
+  &::before {
+    background-image: url("../images/ico/download.svg");
+    top: 48%;
+  }
+}
