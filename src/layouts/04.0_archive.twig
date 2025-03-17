@@ -202,7 +202,7 @@ block main %}
         <div class="subPage-content">
           <div class="subPage-menu">
             <h1 class="h1">Zprávy</h1>
-            <div class="subPageFilter">
+            <form class="subPageFilter">
               <label class="o-select subPageFilter__select">
                 <select class="js-select">
                   <option>2025</option>
@@ -213,7 +213,7 @@ block main %}
                   <option>2020</option>
                 </select>
               </label>
-            </div>
+            </form>
           </div>
           <div class="archiveGrid">
             {% include "@components/post/post.twig" %} {% include
