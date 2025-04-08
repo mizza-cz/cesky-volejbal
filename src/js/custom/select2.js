@@ -4,8 +4,7 @@ $(".js-select, .accreditation-select").select2({
 });
 
 $(function () {
-  //presmerovani pomoci selectu
   $(".js-select").change(function () {
-    location.href = $(this).val();
+    $(".subPageFilter").submit();
   });
 });
