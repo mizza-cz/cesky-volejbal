@@ -187,13 +187,26 @@
         padding-right: 0;
       }
 
-      &.active {
+      &.active,
+      &:hover {
         .dropdown-menu {
           @include media-breakpoint-down(xl) {
             height: 100%;
             display: block;
             position: static;
           }
+        }
+      }
+      &:hover > .dropdown-menu {
+        transition: all 0.8s;
+        display: block;
+        z-index: 28;
+      }
+      &:hover {
+        .navbar__menu-item {
+          background-color: var(--color-secondary);
+          color: var(--color-light);
+          border-color: var(--color-secondary);
         }
       }
       &.active {
@@ -255,7 +268,7 @@
   z-index: 33;
   width: max-content;
   background-color: var(--color-light);
-  top: calc(100% + 2px);
+  top: 100%;
   min-width: 200px;
   padding: 8px 24px;
   border-bottom: 2px solid var(--color-secondary);

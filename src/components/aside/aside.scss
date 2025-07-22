@@ -121,3 +121,10 @@
 .SubMenu-link.active {
   text-decoration-color: inherit;
 }
+
+.SubMenu-item.SubMenu-item--hasSubMenu .SubMenu .SubMenu-link {
+  padding-left: 3.2rem;
+  @include media-breakpoint-down(xl) {
+    padding-left: 2.5rem;
+  }
+}
