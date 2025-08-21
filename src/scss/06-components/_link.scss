@@ -61,3 +61,9 @@ a.link:hover::after {
     top: 48%;
   }
 }
+.link--default {
+  padding-right: 0;
+  &::before {
+    display: none;
+  }
+}
