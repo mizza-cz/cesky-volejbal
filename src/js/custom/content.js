@@ -1,7 +1,6 @@
 tablesWrap();
 iframesWrap();
 
-// TABLE (wysiwyg editor) responsive
 function tablesWrap() {
   var contentTables = document.querySelectorAll(".o-content table"),
     i;
@@ -22,7 +21,6 @@ function tablesWrap() {
   }
 }
 
-// IFRAME youtube/google (wysiwyg editor) responsive
 function iframesWrap() {
   var contentIframes = document.querySelectorAll(".o-content iframe"),
     i;
