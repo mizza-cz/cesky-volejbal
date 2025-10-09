@@ -1,0 +1,491 @@
+{% extends "@components/base/base.twig" %} {% set title = "25.0_table" %} {%
+block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Extraliga</div>
+      </div>
+    </div>
+  </div>
+</header>
+{% include "@components/scoreboard/scoreboard.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        {% include "@components/aside/asideMenu-extraliga.twig" %}
+        <div class="subPage-content w-100">
+          <div class="subPage-menu">
+            <h1 class="h1">1. liga chlapci U18</h1>
+            <form
+              action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543"
+              method="post"
+              id="frm-filterForm"
+              class="subPageFilter w-100"
+            >
+              <label class="o-select subPageFilter__select">
+                <select
+                  name="groupId"
+                  id="frm-filterForm-groupId"
+                  class="js-select"
+                >
+                  <option value="26542">
+                    1. liga U18 chlapci - 1. část - skupina A
+                  </option>
+                  <option value="26543" selected>
+                    1. liga U18 chlapci - 1. část - skupina B
+                  </option>
+                </select>
+              </label>
+              <label class="o-select subPageFilter__select">
+                <select
+                  name="round"
+                  id="frm-filterForm-round"
+                  class="js-select"
+                >
+                  <option value="">Všechny kola</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                </select>
+              </label>
+              <input
+                type="hidden"
+                name="_do"
+                value="filterForm-submit"
+              /><!--[if IE
+                ]><input type="IEbug" disabled style="display: none"
+              /><![endif]-->
+            </form>
+          </div>
+          <div class="o-content tableBox">
+            <table>
+              <colgroup>
+                <col style="width: 50px" />
+                <col />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="text-start">Pořadí</th>
+                  <th class="text-start">Název týmu</th>
+                  <th class="text-center">Z</th>
+                  <th class="text-center">V3</th>
+                  <th class="text-center">V2</th>
+                  <th class="text-center">P1</th>
+                  <th class="text-center">P0</th>
+                  <th class="text-center">S</th>
+                  <th class="text-center">M</th>
+                  <th class="text-center">B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">VK ČEZ KARLOVARSKO</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">16</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">50:18</td>
+                  <td class="text-center">11:35</td>
+                  <td class="text-center">49</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Kladno volejbal cz</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">14</td>
+
+                  <td class="text-center">1</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">48:24</td>
+                  <td class="text-center">12:32</td>
+                  <td class="text-center">43</td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Volejbal Brno</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">13</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">44:26</td>
+                  <td class="text-center">12:30</td>
+                  <td class="text-center">39</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">4</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Volejbal Jihostroj</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">11</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">41:30</td>
+                  <td class="text-center">12:29</td>
+                  <td class="text-center">36</td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Dukla Liberec</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">38:32</td>
+                  <td class="text-center">12:29</td>
+                  <td class="text-center">33</td>
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">VK Lvi Praha</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">9</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">34:33</td>
+                  <td class="text-center">12:29</td>
+                  <td class="text-center">32</td>
+                </tr>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">VK ČEZ KARLOVARSKO</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">16</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">50:18</td>
+                  <td class="text-center">11:35</td>
+                  <td class="text-center">49</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Kladno volejbal cz</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">14</td>
+
+                  <td class="text-center">1</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">48:24</td>
+                  <td class="text-center">12:32</td>
+                  <td class="text-center">43</td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Volejbal Brno</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">13</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">44:26</td>
+                  <td class="text-center">12:30</td>
+                  <td class="text-center">39</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">44</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Volejbal Jihostroj</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">11</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">41:30</td>
+                  <td class="text-center">12:29</td>
+                  <td class="text-center">36</td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">Dukla Liberec</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">38:32</td>
+                  <td class="text-center">12:29</td>
+                  <td class="text-center">33</td>
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td class="text-start">
+                    <a class="h6" href="#">VK Lvi Praha</a>
+                  </td>
+                  <td class="text-center">19</td>
+                  <td class="text-center">9</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center">34:33</td>
+                  <td class="text-center">12:29</td>
+                  <td class="text-center">32</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}
