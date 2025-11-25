@@ -12,6 +12,9 @@
 .text-light {
   color: var(--color-light) !important;
 }
+.bg-line{
+  background: var(--color-line);
+}
 
 .container {
   max-width: 1536px !important;
@@ -52,5 +55,13 @@
 }
 .gap-32 {
   gap: 1rem 2rem;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+.mb-lg-32 {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 32px !important;
+  }
 }
 /*! purgecss end ignore */

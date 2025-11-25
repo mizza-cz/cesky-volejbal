@@ -1,0 +1,23 @@
+.tournamentTable {
+  @include media-breakpoint-down(lg) {
+    overflow-x: auto;
+  }
+  width: 100%;
+  table {
+    width: 100%;
+    color: var(--color-primary);
+    border-collapse: collapse;
+    @include media-breakpoint-down(lg) {
+      min-width: max-content;
+    }
+  }
+  th,
+  td {
+    text-align: center;
+    border: 1px solid var(--color-line);
+    padding: 16px 20px;
+    @include media-breakpoint-down(xl) {
+      padding: 16px 16px;
+    }
+  }
+}

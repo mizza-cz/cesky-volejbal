@@ -1,0 +1,35 @@
+.tournamentItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-line);
+  gap: 16px;
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  &__content {
+    gap: 12px 56px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include media-breakpoint-down(xl) {
+      gap: 8px 32px;
+    }
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+  }
+  a {
+    text-decoration-color: transparent;
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+}
+.nowrap {
+  white-space: nowrap;
+}
