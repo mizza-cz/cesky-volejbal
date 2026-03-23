@@ -1,6 +1,5 @@
-{% extends "@components/base/base.twig" %} {% set title = "08.0_event-detail" %}
-{% block main %}
-
+{% extends "@components/base/base.twig" %} {% set title =
+"27.0_extraliga-club-detail" %} {% block main %}
 <header class="header">
   <div class="header__top">
     <div class="container">
@@ -190,124 +189,20 @@
         <button class="c-header__opener js-header__opener" type="button">
           <span></span>
         </button>
-        <div id="subMenuBtn">Reprezentace</div>
+        <div id="subMenuBtn">Extraliga</div>
       </div>
     </div>
   </div>
 </header>
+{% include "@components/scoreboard/scoreboard.twig" %}
 <main class="main" aria-label="Hlavní obsah">
   <section class="subPage">
     <div class="container">
       <div class="subPage-grid">
-        {% include "@components/aside/asideMenu-repre.twig" %}
+        {% include "@components/aside/asideMenu-extraliga.twig" %}
         <div class="subPage-content">
-          <h1 class="h1 mb-4">Muži - turnaj GEL S.Makedonie: CZE - EST</h1>
-          <div class="detailBox mb-4">
-            <ul class="detailBox__list">
-              <li class="detailBox__item">
-                <img src="images/ico/calendar.svg" alt="calendar" />
-                <div class="p1 fw-bold">Termín:</div>
-                <div class="p1">24. 11. 2024 – 26. 11. 2024</div>
-              </li>
-              <li class="detailBox__item">
-                <img src="images/ico/marker.svg" alt="marker" />
-                <div class="p1 fw-bold">Místo konání:</div>
-                <div class="p1">Skopje (Severní Makedonie)</div>
-              </li>
-              <li class="detailBox__item">
-                <img src="images/ico/file.svg" alt="file" />
-                <div class="p1 fw-bold">Soubory ke stažení:</div>
-                <a href="#" download>Propozice (.pdf, 405 kB)</a>
-                <a href="#" download>Nominace (.pdf, 405 kB)</a>
-                <a href="#" download>Týmová fotografie (.jpg, 1522 kB)</a>
-              </li>
-            </ul>
-          </div>
-          <div class="o-content">
-            <h2>Popis</h2>
-            <p>
-              Český volejbalový svaz je jediným subjektem uznaným Ministerstvem
-              školství, mládeže a tělovýchovy České republiky a Českým
-              olympijským výborem a současně jediným garantem rozvoje volejbalu
-              pověřeným řízením volejbalu a beachvolejbalu (dále jen
-              „volejbalu") na území České republiky.
-            </p>
-            <p>
-              ČVS je zakládajícím členem mezinárodních volejbalových organizací:
-              Mezinárodní volejbalové federace (dále jen „FIVB") a Evropské
-              volejbalové konfederace (dále jen „CEV"). Jejich základní
-              dokumenty jsou východiskem pro činnost ČVS a musí být respektovány
-              i jakoukoliv třetí stranou podílející se v součinnosti s ČVS na
-              rozvoji volejbalu v České republice.
-            </p>
-            <p>
-              Na území České republiky jsou celostátní orgány ČVS (konference
-              ČVS, výbor ČVS, správní rada ČVS) oprávněny rozhodnout o
-              případných odlišnostech směrnic ČVS oproti dokumentům FIVB a CEV.
-              ČVS je jediným představitelem českého volejbalu v těchto
-              mezinárodních organizacích.
-            </p>
-          </div>
-          <h3 class="h2 mb-3 mt-4">Nominace</h3>
-          <div class="row g-4">
-            <div class="col-lg-4 col-sm-6">
-              <a class="playerItem" href="#">
-                <div class="playerItem__img">
-                  <img src="images/content/ava.jpg" loading="lazy" alt="ava" />
-                </div>
-                <div class="playerItem__content">
-                  <h3 class="h4">Jiří Carba</h3>
-                  <div class="fw-bold">Redakce, web</div>
-                  <div class="p2">carba@cvf.cz</div>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              {% include "@components/playerItem/playerItem.twig" %}
-            </div>
-          </div>
+          {% include "@components/clubDetail/clubDetail.twig" %}
+         
         </div>
       </div>
     </div>
