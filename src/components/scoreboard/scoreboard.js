@@ -1,11 +1,13 @@
+const index = $(".scoreboard__box.is-initial").index();
 $("#js-scoreboard").slick({
+  initialSlide: index,
   slidesToShow: 7,
   slidesToScroll: 1,
   variableWidth: true,
   prevArrow:
-    '<button class="scoreboard__btn scoreboard__btnprev"><img src="./images/ico/scoreboard-left.svg" alt="" ></button> ',
+    '<button class="scoreboard__btn scoreboard__btnprev"><img src="/images/ico/scoreboard-left.svg" alt="" ></button> ',
   nextArrow:
-    ' <button class="scoreboard__btn  scoreboard__btnnext"><img  src="./images/ico/scoreboard-right.svg" alt = "" ></button>',
+    ' <button class="scoreboard__btn  scoreboard__btnnext"><img  src="/images/ico/scoreboard-right.svg" alt = "" ></button>',
   responsive: [
     {
       breakpoint: 1800,
