@@ -2,7 +2,7 @@
   padding-bottom: 12px !important;
   table {
     width: 100%;
-    min-width: max-content;
+    min-width: 640px;
     border-collapse: collapse;
   }
   th {
@@ -10,6 +10,7 @@
   }
   th {
     padding: 4px 12px;
+    line-height: 130%;
   }
 
   td {
@@ -29,4 +30,7 @@
 .table-responsive {
   width: 100%;
   overflow-x: auto;
+}
+.tablTournaments td a {
+  white-space: normal;
 }

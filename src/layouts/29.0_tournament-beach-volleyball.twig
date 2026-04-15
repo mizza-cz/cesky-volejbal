@@ -1,0 +1,647 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"29.0_tournament-beach-volleyball" %} {% block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Extraliga</div>
+      </div>
+    </div>
+  </div>
+</header>
+{% include "@components/scoreboard/scoreboard.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        <div class="subPage-content w-100">
+          <div class="subPage-menu">
+            <h1 class="h1">Žebříčky - Beachvolejbal</h1>
+
+            <form
+              action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543"
+              method="post"
+              id="frm-filterForm"
+              class="subPageFilter subPageFilter-row w-100 row gap-0 g-3"
+            >
+              <div class="col-md-3 col-sm-6">
+                <label class="o-select subPageFilter__select w-100">
+                  <select
+                    name="yearId"
+                    id="frm-filterForm-year"
+                    class="js-select"
+                  >
+                    <option value="">Všechny</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <label class="o-select subPageFilter__select w-sm-auto w-100">
+                  <select
+                    name="monthId"
+                    id="frm-filterForm-monthId"
+                    class="js-select"
+                  >
+                    <option value="">Všechny</option>
+                    <option value="1">Leden</option>
+                    <option value="2">Únor</option>
+                    <option value="3">Březen</option>
+                    <option value="4">Duben</option>
+                    <option value="5">Květen</option>
+                    <option value="6">Červen</option>
+                    <option value="7">Červenec</option>
+                    <option value="8">Srpen</option>
+                    <option value="9">Září</option>
+                    <option value="10">Říjen</option>
+                    <option value="11">Listopad</option>
+                    <option value="12">Prosinec</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <label class="o-select subPageFilter__select w-sm-auto w-100">
+                  <select
+                    name="categorieId"
+                    id="frm-filterForm-categorieId"
+                    class="js-select"
+                  >
+                    <option value="">Všechny</option>
+                    <option value="Muži">Muži</option>
+                    <option value="Ženy">Ženy</option>
+                    <option value="Junioři">U20 muži</option>
+                    <option value="Juniorky">U20 ženy</option>
+                    <option value="Kadeti">U18 muži</option>
+                    <option value="Kadetky">U18 ženy</option>
+                    <option value="Žáci">U16 muži</option>
+                    <option value="Žákyně">U16 ženy</option>
+                    <option value="Smíšené">Chlapci + dívky</option>
+                    <option value="vlastni">Vlastní</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <label class="o-select subPageFilter__select w-sm-auto w-100">
+                  <select
+                    name="placeId"
+                    id="frm-filterForm-placeId"
+                    class="js-select"
+                  >
+                    <option value="">Všechny</option>
+                    <option value="2">celostátní - ABV</option>
+                    <option value="3">kraj - Praha</option>
+                    <option value="4">kraj - Středočeský</option>
+                    <option value="5">kraj - Jihočeský</option>
+                    <option value="6">kraj - Plzeňský</option>
+                    <option value="7">kraj - Karlovarský</option>
+                    <option value="8">kraj - Ústecký</option>
+                    <option value="9">kraj - Liberecký</option>
+                    <option value="10">kraj - Královéhradecký</option>
+                    <option value="11">kraj - Pardubický</option>
+                    <option value="12">kraj - Olomoucký</option>
+                    <option value="13">kraj - Moravskoslezský</option>
+                    <option value="14">kraj - Jihomoravský</option>
+                    <option value="15">kraj - Zlínský</option>
+                    <option value="16">kraj - Vysočina</option>
+                    <option value="17">mezinárodní</option>
+                    <option value="18">Snowvolejbal</option>
+                  </select>
+                </label>
+              </div>
+
+              <input type="hidden" name="_do" value="filterForm-submit" />
+
+              <!--[if IE
+                ]><input type="IEbug" disabled style="display: none"
+              /><![endif]-->
+            </form>
+          </div>
+          <div class="o-content tableBox">
+            <table class="tablTournaments">
+              <thead>
+                <tr>
+                  <th class="text-start">Turnaj</th>
+                  <th class="text-start">Místo</th>
+                  <th class="text-center">Datum od</th>
+                  <th class="text-center">Složka</th>
+                  <th class="text-center">KAT</th>
+
+                  <th class="text-center">
+                    Bodové hodnocení <br />
+                    pro zapsání
+                  </th>
+                  <th class="text-center">
+                    Bodové hodnocení <br />
+                    pro propsání
+                  </th>
+                  <th class="text-center">
+                    Přihlášených <br />
+                    dvojic
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Beachliga U18M</a>
+                  </td>
+                  <td class="text-start">Beachklub Ládví</td>
+                  <td class="text-center">11.4.2026</td>
+                  <td class="text-center">kraj - Praha</td>
+                  <td class="text-center">U18 muži</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Beachliga Dospělí M</a
+                    >
+                  </td>
+                  <td class="text-start">Beachclub Strahov</td>
+                  <td class="text-center">11.4.2026</td>
+                  <td class="text-center">kraj - Praha</td>
+                  <td class="text-center">Muži</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">FIVB BPT Future</a>
+                  </td>
+                  <td class="text-start">Tahiti (FRA)</td>
+                  <td class="text-center">30.3.2026</td>
+                  <td class="text-center">mezinárodní</td>
+                  <td class="text-center">Muži</td>
+                  <td class="text-center">250</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">1</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Robby Bubble U14 série A</a
+                    >
+                  </td>
+                  <td class="text-start">Brno (Riviéra)</td>
+                  <td class="text-center">29.3.2026</td>
+                  <td class="text-center">kraj - Jihomoravský</td>
+                  <td class="text-center">Chlapci + dívky</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">25</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Robby Bubble U14 série B</a
+                    >
+                  </td>
+                  <td class="text-start">Brno (Riviéra)</td>
+                  <td class="text-center">29.3.2026</td>
+                  <td class="text-center">kraj - Jihomoravský</td>
+                  <td class="text-center">Chlapci + dívky</td>
+                  <td class="text-center">40</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">14</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Podještědská beachliga 2025/26 KP2 - 6.kolo - U20 ženy</a
+                    >
+                  </td>
+                  <td class="text-start">Liberec</td>
+                  <td class="text-center">29.3.2026</td>
+                  <td class="text-center">kraj - Liberecký</td>
+                  <td class="text-center">U20 ženy</td>
+                  <td class="text-center">25</td>
+                  <td class="text-center">15</td>
+                  <td class="text-center">13</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Robby Bubble U20 ženy (ABV body)</a
+                    >
+                  </td>
+                  <td class="text-start">Brno (Riviéra)</td>
+                  <td class="text-center">28.3.2026</td>
+                  <td class="text-center">kraj - Jihomoravský</td>
+                  <td class="text-center">U20 ženy</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">25</td>
+                  <td class="text-center">38</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Beachliga U16Ž</a>
+                  </td>
+                  <td class="text-start">SC Braník</td>
+                  <td class="text-center">28.3.2026</td>
+                  <td class="text-center">kraj - Praha</td>
+                  <td class="text-center">U16 ženy</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Beachliga U20Ž</a>
+                  </td>
+                  <td class="text-start">Hamr - Záběhlice</td>
+                  <td class="text-center">28.3.2026</td>
+                  <td class="text-center">kraj - Praha</td>
+                  <td class="text-center">U20 ženy</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Beachliga U16M</a>
+                  </td>
+                  <td class="text-start">Beachklub Ládví</td>
+                  <td class="text-center">28.3.2026</td>
+                  <td class="text-center">kraj - Praha</td>
+                  <td class="text-center">U16 muži</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Beachliga U20M</a>
+                  </td>
+                  <td class="text-start">BVŠP - Mikulovka</td>
+                  <td class="text-center">28.3.2026</td>
+                  <td class="text-center">kraj - Praha</td>
+                  <td class="text-center">U20 muži</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">0</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Challenger</a
+                    >
+                  </td>
+                  <td class="text-start">Nayarit (MEX)</td>
+                  <td class="text-center">25.3.2026</td>
+                  <td class="text-center">mezinárodní</td>
+                  <td class="text-center">Muži</td>
+                  <td class="text-center">500</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">1</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Pískomil Cup U20 ženy</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    Areál Plážový klub PÍSKOMIL, ul. Dolní Hejčínská, Olomouc
+                  </td>
+                  <td class="text-center">22.3.2026</td>
+                  <td class="text-center">kraj - Olomoucký</td>
+                  <td class="text-center">U20 ženy</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">10</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Robby Bubble U12 série A</a
+                    >
+                  </td>
+                  <td class="text-start">Brno (Centrum Viktoria)</td>
+                  <td class="text-center">22.3.2026</td>
+                  <td class="text-center">kraj - Jihomoravský</td>
+                  <td class="text-center">Chlapci + dívky</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">18</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >BeachPunk JMK Muži (ABV body)</a
+                    >
+                  </td>
+                  <td class="text-start">Brno (Riviéra)</td>
+                  <td class="text-center">22.3.2026</td>
+                  <td class="text-center">kraj - Jihomoravský</td>
+                  <td class="text-center">Muži</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">15</td>
+                  <td class="text-center">11</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Podještědská beachliga 2025/26 KP1 - 7.kolo - U18 ženy
+                      (ABV body)</a
+                    >
+                  </td>
+                  <td class="text-start">Liberec</td>
+                  <td class="text-center">22.3.2026</td>
+                  <td class="text-center">kraj - Liberecký</td>
+                  <td class="text-center">U18 ženy</td>
+                  <td class="text-center">25</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">6</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Podještědská beachliga 2025/26 KP1 - 7.kolo - U14 chlapci
+                      a dívky</a
+                    >
+                  </td>
+                  <td class="text-start">Liberec</td>
+                  <td class="text-center">22.3.2026</td>
+                  <td class="text-center">kraj - Liberecký</td>
+                  <td class="text-center">Chlapci + dívky</td>
+                  <td class="text-center">25</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">17</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Podještědská beachliga 2025/26 KP1 - 7.kolo - U12 chlapci
+                      a dívky</a
+                    >
+                  </td>
+                  <td class="text-start">Liberec</td>
+                  <td class="text-center">22.3.2026</td>
+                  <td class="text-center">kraj - Liberecký</td>
+                  <td class="text-center">Chlapci + dívky</td>
+                  <td class="text-center">25</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">9</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Pískomil Cup U16 ženy</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    Areál Plážový klub PÍSKOMIL, ul. Dolní Hejčínská, Olomouc
+                  </td>
+                  <td class="text-center">22.3.2026</td>
+                  <td class="text-center">kraj - Olomoucký</td>
+                  <td class="text-center">U16 ženy</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">12</td>
+                </tr>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Zimní pohár Pardubice - U18 ženy (ABV body)</a
+                    >
+                  </td>
+                  <td class="text-start">Pardubice</td>
+                  <td class="text-center">21.3.2026</td>
+                  <td class="text-center">kraj - Pardubický</td>
+                  <td class="text-center">U18 ženy</td>
+                  <td class="text-center">25</td>
+                  <td class="text-center">15</td>
+                  <td class="text-center">16</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {% include "@components/pagination/pagination.twig" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

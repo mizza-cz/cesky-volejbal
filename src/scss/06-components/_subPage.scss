@@ -78,4 +78,16 @@
       left: 3.5px;
     }
   }
+  &__btn {
+    font-weight: 700;
+    display: block;
+    border: none;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
 }
+
+ 

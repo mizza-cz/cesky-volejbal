@@ -1,0 +1,21 @@
+input {
+  border: 0.0625rem solid var(--color-primary);
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  min-width: 7rem;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--color-primary);
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: all 0.25s linear;
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    outline: 0.0625rem solid var(--color-primary);
+  }
+}

@@ -1,0 +1,664 @@
+{% extends "@components/base/base.twig" %} {% set title = "30.0_directory" %} {%
+block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Reprezentace</div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        <div class="subPage-content">
+          <h1 class="h1 mb-4">Adresář ČVS</h1>
+          <div class="detailBox mb-4">
+            <ul class="detailBox__list">
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">Adresa:</div>
+                <div class="p1">Bělohorská 19 160 00, Praha 6-Břevnov</div>
+              </li>
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">Tel/fax/záznam:</div>
+                <div class="p1">(+420) 773 788 766</div>
+              </li>
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">Email:</div>
+                <a href="#" class="p1 text-primary">cvf@cvf.cz</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="archiveGrid mb-6">
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Výbor"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Výbor</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Sekretariát"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Sekretariát</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - odborné úseky ČVS"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - odborné úseky ČVS</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Kontrolní a revizní komise"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Kontrolní a revizní komise</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Sportovně-technická komise"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Sportovně-technická komise</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Odvolací komise"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Odvolací komise</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Registrační a matriční komise"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Registrační a matriční komise</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Komise rozhodčích"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Komise rozhodčích</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Legislativní komise"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Legislativní komise</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Disciplinární komise"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Disciplinární komise</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Komise společenského významu"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Komise společenského významu</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Arbitrážní komise"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Arbitrážní komise</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="ČVS - Beachvolejbal"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">ČVS - Beachvolejbal</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/jihocesky.svg"
+                  loading="lazy"
+                  alt="KVS - Jihočeský"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Jihočeský</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/jihomoravsky.svg"
+                  loading="lazy"
+                  alt="KVS - Jihomoravský"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Jihomoravský</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/karlovarsky.svg"
+                  loading="lazy"
+                  alt="KVS - Karlovarský"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Karlovarský</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/kralovehradecky.svg"
+                  loading="lazy"
+                  alt="KVS - Královéhradecký"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Královéhradecký</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/liberecky.svg"
+                  loading="lazy"
+                  alt="KVS - Liberecký"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Liberecký</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/moravskoslezky.svg"
+                  loading="lazy"
+                  alt="KVS - Moravskoslezský"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Moravskoslezský</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/olomoucky.svg"
+                  loading="lazy"
+                  alt="KVS - Olomoucký"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Olomoucký</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/pardubicky.svg"
+                  loading="lazy"
+                  alt="KVS - Pardubický"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Pardubický</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/plzensky.svg"
+                  loading="lazy"
+                  alt="KVS - Plzeňský"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Plzeňský</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/praha.svg"
+                  loading="lazy"
+                  alt="KVS - Praha"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Praha</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/stredocesky.svg"
+                  loading="lazy"
+                  alt="KVS - Středočeský"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Středočeský</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/ustecky.svg"
+                  loading="lazy"
+                  alt="KVS - Ústecký"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Ústecký</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/vysocina.svg"
+                  loading="lazy"
+                  alt="KVS - Vysočina"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Vysočina</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/ico/zlinsky.svg"
+                  loading="lazy"
+                  alt="KVS - Zlínský"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">KVS - Zlínský</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="AVD - Rada"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">AVD - Rada</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="AVOK - Muži"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">AVOK - Muži</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+
+            <div class="regionItem">
+              <div class="regionItem__img">
+                <img
+                  src="images/content/ava-def.png"
+                  loading="lazy"
+                  alt="AVOK - Ženy"
+                />
+              </div>
+              <h3 class="h4 mb-2 text-center">
+                <a href="#">AVOK - Ženy</a>
+              </h3>
+              <a href="#" class="link">Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

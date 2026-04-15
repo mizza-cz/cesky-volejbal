@@ -1,0 +1,653 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"32.0_tournament-beach-detail" %} {% block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Extraliga</div>
+      </div>
+    </div>
+  </div>
+</header>
+{% include "@components/scoreboard/scoreboard.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        <div class="subPage-content w-100">
+          <h1 class="h1 mb-3">
+            Robby Bubble U20 ženy (ABV body) / Brno (Riviéra)
+          </h1>
+          <div class="detailBox mb-4">
+            <ul class="detailBox__list">
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">so 26. 10. 2024</div>
+              </li>
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">kategorie:</div>
+                <div class="p1">U20 žen</div>
+              </li>
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">žebříček pro zapsání bodů:</div>
+                <div class="p1">kraj Jihomoravský - U20 ženy</div>
+              </li>
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">žebříček pro propsání bodů:</div>
+                <a href="#" class="p1 text-primary">ABV - U20 ženy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="o-content">
+            <h2>
+              <a
+                style="color: #e4003a"
+                href="https://docs.google.com/spreadsheets/d/17MD-y4mQyCvyfebnTeVA__UA1J0ly33u/edit?usp=sharing&amp;ouid=106861415125137881111&amp;rtpof=true&amp;sd=true"
+                >ONLINE VÝSLEDKY A ROZPIS ZÁPASŮ ZDE (1. a 2.liga)</a
+              >
+            </h2>
+            <p></p>
+            <h2>
+              <a
+                style="color: #e4003a"
+                href="https://docs.google.com/spreadsheets/d/17vMgMrXlV7RcoT5Dhg5UHAE1BzYvEGD2/edit?usp=sharing&amp;ouid=106861415125137881111&amp;rtpof=true&amp;sd=true"
+                >ONLINE VÝSLEDKY A ROZPIS ZÁPASŮ ZDE (3.liga)</a
+              >
+            </h2>
+            <p></p>
+            <p>
+              <span style="color: #e4003a"
+                >NASAZENÍ DO TURNAJE DLE BODŮ V ŽEBŘÍČKU ABV U20 ŽENY</span
+              >
+            </p>
+            <p>
+              <strong>Rozdělení do jednotlivých lig je následující:</strong>
+            </p>
+            <p>
+              1. liga - hráči v hlavní soutěží (1. - 16. dvojice)
+              <span>- začátek v 10:00 na Riviéře</span><span><br /></span>
+            </p>
+            <p>
+              2. liga - hráči v kvalifikaci (17. - 32. dvojice)
+              <span>- začátek v 10:00 na Riviéře</span>
+            </p>
+            <p>
+              3. liga - hráči v náhradnících (33. - 42. dvojice)
+              <span>- začátek v 15:00 na Riviéře</span>
+            </p>
+            <ul type="disc">
+              <li>
+                Platba startovného přes
+                <a
+                  href="https://eshop.beachacademy.cz/produkt/turnaje/krajska-liga-jmk-mladez/"
+                  >e-shop</a
+                >
+                do čtvrtka 20:00 (na místě nebude možné platit startovné - v
+                případě nezaplacení v tomto termínu, bude tým z turnaje
+                odhlášen)
+              </li>
+              <li>
+                Špatně přidělené body a jiné námitky lze reklamovat do čtvrtka
+                do 10:00 na email info@beachturnaje.cz, poté již námitky nebudou
+                akceptovány
+              </li>
+              <li>
+                Body pro nasazení v turnaji budou počítany z žebříčku ABV. Z
+                důvodu srazu VSCB
+              </li>
+            </ul>
+            <p>
+              Partnerem turnaje kategorie JMK U20 je Robby Bubble.<br />Informace
+              o registraci týmů a další podrobnosti naleznete v propozicích<br />Startovné
+              lze zaplatit <strong>pouze</strong> přes
+              <a
+                href="https://eshop.beachacademy.cz/produkt/turnaje/krajska-liga-jmk-mladez/"
+                >e-shop</a
+              >
+              300 Kč / hráč<br />Kontakt na organizátora: Lukáš Borek, 774 444
+              879
+            </p>
+            <p></p>
+            <p>Možnosti kde zaparkovat:</p>
+            <p>
+              1) Areál Anthropos a dojít přes cyklostezku podél řeky Svratky na
+              Riviéru. Pod
+              <a
+                href="https://www.google.com/maps/dir/49.1917174,16.5653124/L%C3%A1vka/@49.1897113,16.5636976,15.58z/data=!4m15!4m14!1m6!3m4!1m2!1d16.5690211!2d49.1862328!3s0x471295cdf0701de9:0x60175f87118c719e!4e1!1m5!1m1!1s0x471295e64237cdc1:0x96b1e4a42d2967c7!2m2!1d16.5703702!2d49.1864041!3e2?coh=198943&amp;entry=tts"
+                target="_blank"
+                data-saferedirecturl="https://www.google.com/url?q=https://www.google.com/maps/dir/49.1917174,16.5653124/L%25C3%25A1vka/@49.1897113,16.5636976,15.58z/data%3D!4m15!4m14!1m6!3m4!1m2!1d16.5690211!2d49.1862328!3s0x471295cdf0701de9:0x60175f87118c719e!4e1!1m5!1m1!1s0x471295e64237cdc1:0x96b1e4a42d2967c7!2m2!1d16.5703702!2d49.1864041!3e2?coh%3D198943%26entry%3Dtts&amp;source=gmail&amp;ust=1732036227500000&amp;usg=AOvVaw0KJTh9d7Ux_dZ-G-IqJHp2"
+                >tímto odkazem</a
+              >, zasílám mapu s cestou od Anthroposu, kde zaparkovat a kudy
+              přijít na turnaj.
+            </p>
+            <p>
+              2) Parkovací dům Expoparking na ulici Křížkovského 416/22 (cca
+              10min. chůze k areálu Riviéra, sazba za parkování činí 30Kč/hod.).
+            </p>
+          </div>
+          <div class="detailBox gap-2 d-flex flex-column mt-4">
+            <div class="detailBox__item">
+              <img
+                width="24"
+                height="24"
+                class="object-fit-contain"
+                src="images/ico/doc.svg"
+                alt="doc"
+              />
+              <a
+                href="/beach_priloha.php?nazev=2026_LEG_Souhlas_zakonneho_zastupce_ABV_vzor.pdf&id=4453"
+                >2026_LEG_Souhlas_zakonneho_zastupce_ABV_vzor.pdf</a
+              >
+            </div>
+            <div class="detailBox__item">
+              <img
+                width="24"
+                height="24"
+                class="object-fit-contain"
+                src="images/ico/doc.svg"
+                alt="doc"
+              />
+              <a
+                href="/beach_priloha.php?nazev=Hrac%C3%AD+%C5%99%C3%A1d+2026+JMK.pdf&id=4453"
+              >
+                Hrací řád 2026 JMK.pdf</a
+              >
+            </div>
+            <div class="detailBox__item">
+              <img
+                width="24"
+                height="24"
+                class="object-fit-contain"
+                src="images/ico/doc.svg"
+                alt="doc"
+              />
+              <a
+                href="/beach_priloha.php?nazev=U20+%C5%BEeny+28.3.2026+%28propozice%29.pdf&id=4453"
+              >
+                U20 ženy 28.3.2026 (propozice).pdf</a
+              >
+            </div>
+          </div>
+          <div class="o-content tableBox mt-5">
+            <h2>Výsledková listina</h2>
+            <table class="tablTournaments">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th class="text-start">Jméno</th>
+                  <th class="text-start">Oddíl</th>
+                  <th class="text-center">Body zápis</th>
+                  <th class="text-center">Body propis</th>
+                  <th class="text-start">Jméno</th>
+                  <th class="text-start">Oddíl</th>
+                  <th class="text-center">Body zápis</th>
+                  <th class="text-center">Body propis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">
+                      Zuzana Lajkebová</a
+                    >
+                  </td>
+                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
+                  <td class="text-center">100.00</td>
+                  <td class="text-center">25.00</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"> Emily Moserová</a>
+                  </td>
+                  <td class="text-start">SKUP Olomouc, z.s.</td>
+                  <td class="text-center">100.00</td>
+                  <td class="text-center">25.00</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Sára Červinková</a>
+                  </td>
+                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
+                  <td class="text-center">90.00</td>
+                  <td class="text-center">22.50</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Ema Rosí</a>
+                  </td>
+                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
+                  <td class="text-center">90.00</td>
+                  <td class="text-center">22.50</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">3</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Zuzana Dundáčková</a
+                    >
+                  </td>
+                  <td class="text-start">BEACH ACADEMY VIKTORIA BRNO, z.s.</td>
+                  <td class="text-center">83.00</td>
+                  <td class="text-center">20.00</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Anika Dundáčková</a
+                    >
+                  </td>
+                  <td class="text-start">BEACH ACADEMY VIKTORIA BRNO, z.s.</td>
+                  <td class="text-center">83.00</td>
+                  <td class="text-center">20.00</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">4</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Veronika Hošková</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    Sportovní klub BEACHKLUB PRAHA, spolek
+                  </td>
+                  <td class="text-center">76.00</td>
+                  <td class="text-center">17.50</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Agáta Dušková</a>
+                  </td>
+                  <td class="text-start">Beachvolejbalová škola Praha, z.s.</td>
+                  <td class="text-center">76.00</td>
+                  <td class="text-center">17.50</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">5</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Amálie Ebertová</a>
+                  </td>
+                  <td class="text-start">Beachvolejbalová škola Praha, z.s.</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Elena Svobodová</a>
+                  </td>
+                  <td class="text-start">Beachvolejbalová škola Praha, z.s.</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">5</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Amelia Panek</a>
+                  </td>
+                  <td class="text-start">POL</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Zuzanna Woźniak</a>
+                  </td>
+                  <td class="text-start">POL</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">5</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Aneta Glotzmannová</a
+                    >
+                  </td>
+                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Kateřina Kleiblová</a
+                    >
+                  </td>
+                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">5</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Žofie Heroutová</a>
+                  </td>
+                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Aneta Žižková</a>
+                  </td>
+                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
+                  <td class="text-center">70.00</td>
+                  <td class="text-center">15.75</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">9</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Hania Leśniewicz</a
+                    >
+                  </td>
+                  <td class="text-start">POL</td>
+                  <td class="text-center">65.00</td>
+                  <td class="text-center">12.50</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Natalia Lewandowska</a
+                    >
+                  </td>
+                  <td class="text-start">POL</td>
+                  <td class="text-center">65.00</td>
+                  <td class="text-center">12.50</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">9</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Aleksandra Wolny</a
+                    >
+                  </td>
+                  <td class="text-start">POL</td>
+                  <td class="text-center">65.00</td>
+                  <td class="text-center">12.50</td>
+
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Zuzanna Legień</a>
+                  </td>
+                  <td class="text-start">POL</td>
+                  <td class="text-center">65.00</td>
+                  <td class="text-center">12.50</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 class="mt-5">Startovní listina</h2>
+
+            <table class="tablPairs">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th class="text-start">Jméno</th>
+                  <th class="text-start">Oddíl</th>
+                  <th class="text-start">Jméno</th>
+                  <th class="text-start">Oddíl</th>
+                  <th class="text-start">Poznámka</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <a href="#" class="text-primary fw-bold"
+                      >Zuzana Lajkebová</a
+                    >
+                  </td>
+                  <td>Tělocvičná jednota Sokol Brno I</td>
+                  <td>Emily Moserová</td>
+                  <td>SKUP Olomouc, z.s.</td>
+                  <td>Moserová</td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <a href="#" class="text-primary fw-bold">Sára Červinková</a>
+                  </td>
+
+                  <td>Tělocvičná jednota Sokol Brno I</td>
+                  <td>Ema Rosí</td>
+                  <td>Tělocvičná jednota Sokol Brno I</td>
+                  <td>Tělocvičná Tělocvičná</td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <a href="#" class="text-primary fw-bold"
+                      >Zuzana Dundáčková</a
+                    >
+                  </td>
+                  <td>BEACH ACADEMY VIKTORIA BRNO, z.s.</td>
+                  <td>Anika Dundáčková</td>
+                  <td>BEACH ACADEMY VIKTORIA BRNO, z.s.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <a class="text-primary fw-bold" href="#"
+                      >Veronika Hošková</a
+                    >
+                  </td>
+                  <td>Sportovní klub BEACHKLUB PRAHA</td>
+                  <td>Agáta Dušková</td>
+                  <td>Beachvolejbalová škola Praha</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

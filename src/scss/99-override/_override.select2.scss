@@ -150,4 +150,9 @@
 .select2-hidden-accessible {
   display: none !important;
 }
+.subPageFilter-row {
+  .select2-container--default .select2-selection--single {
+    width: 100% !important;
+  }
+}
 /*! purgecss end ignore */
