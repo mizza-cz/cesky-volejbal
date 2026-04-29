@@ -1,0 +1,446 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"34.0_tournament-beach-player-detail" %} {% block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Extraliga</div>
+      </div>
+    </div>
+  </div>
+</header>
+{% include "@components/scoreboard/scoreboard.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        <div class="subPage-content w-100">
+          <h1 class="h1 mb-3">Ondřej Perušič</h1>
+          <div class="detailBox mb-4">
+            <ul class="detailBox__list">
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">Rok narození</div>
+                <div class="p1">1994</div>
+              </li>
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">Započítané body v žebříčku:</div>
+                <div class="p1">3007.5</div>
+              </li>
+              <li class="detailBox__item">
+                <div class="p1 fw-bold">Celkové body v žebříčku</div>
+                <p class="p1 text-primary">3007.5</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="o-content tableBox">
+            <table class="tablTournaments">
+              <thead>
+                <tr>
+                  <th class="text-start">Turnaj</th>
+                  <th class="text-start">Místo</th>
+                  <th class="text-center">Datum</th>
+                  <th class="text-center">Umístění</th>
+                  <th class="text-center">Body</th>
+
+                  <th class="text-center">Kategorie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >USN Halové mistrovství ČR</a
+                    >
+                  </td>
+                  <td class="text-start">Praha (Strahov)</td>
+                  <td class="text-center">21.2.2026</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">70</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">FIVB MS</a>
+                  </td>
+                  <td class="text-start">Adelaide (AUS)</td>
+                  <td class="text-center">14.11.2025</td>
+                  <td class="text-center">5</td>
+                  <td class="text-center">600</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Elite16</a
+                    >
+                  </td>
+                  <td class="text-start">Montreal (CAN)</td>
+                  <td class="text-center">13.8.2025</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">625</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">CEV ME</a>
+                  </td>
+                  <td class="text-start">Dusseldorf (GER)</td>
+                  <td class="text-center">30.7.2025</td>
+                  <td class="text-center">5</td>
+                  <td class="text-center">300</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Elite16</a
+                    >
+                  </td>
+                  <td class="text-start">Gstaad (SUI)</td>
+                  <td class="text-center">2.7.2025</td>
+                  <td class="text-center">13</td>
+                  <td class="text-center">287.5</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Challenger</a
+                    >
+                  </td>
+                  <td class="text-start">Alanya (TUR)</td>
+                  <td class="text-center">11.6.2025</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">500</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Elite16</a
+                    >
+                  </td>
+                  <td class="text-start">Ostrava (CZE)</td>
+                  <td class="text-center">28.5.2025</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">625</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Elite16</a
+                    >
+                  </td>
+                  <td class="text-start">Quintana Roo (MEX)</td>
+                  <td class="text-center">26.3.2025</td>
+                  <td class="text-center">5</td>
+                  <td class="text-center">475</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Challenger</a
+                    >
+                  </td>
+                  <td class="text-start">Yucatan (MEX)</td>
+                  <td class="text-center">19.3.2025</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">500</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">FIVB BPT Finals</a>
+                  </td>
+                  <td class="text-start">Doha (QAT)</td>
+                  <td class="text-center">4.12.2024</td>
+                  <td class="text-center">7</td>
+                  <td class="text-center">212.5</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >ČEZ Mistrovství ČR</a
+                    >
+                  </td>
+                  <td class="text-start">Praha (BK Ládví)</td>
+                  <td class="text-center">30.8.2024</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">150</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">FIVB BPT Future</a>
+                  </td>
+                  <td class="text-start">Brno (CZE)</td>
+                  <td class="text-center">21.8.2024</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">250</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">Olympijské hry</a>
+                  </td>
+                  <td class="text-start">Paříž (FRA)</td>
+                  <td class="text-center">27.7.2024</td>
+                  <td class="text-center">9</td>
+                  <td class="text-center">750</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Elite16</a
+                    >
+                  </td>
+                  <td class="text-start">Ostrava (CZE)</td>
+                  <td class="text-center">5.6.2024</td>
+                  <td class="text-center">9</td>
+                  <td class="text-center">375</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >FIVB BPT Challenge</a
+                    >
+                  </td>
+                  <td class="text-start">Stare Jablonki (POL)</td>
+                  <td class="text-center">30.5.2024</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">500</td>
+                  <td class="text-center">Muži</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {% include "@components/pagination/pagination.twig" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}
