@@ -1,0 +1,22 @@
+.alert {
+  border: 0.0625rem solid var(--color-accent);
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  background: var(--color-light);
+  width: fit-content;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--color-blue-600);
+}
+.alert-danger {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+.alert-primary {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
