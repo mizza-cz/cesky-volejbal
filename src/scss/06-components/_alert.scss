@@ -1,7 +1,7 @@
 .alert {
   border: 0.0625rem solid var(--color-accent);
   border-radius: 0.5rem;
-  padding: 0.75rem 2rem;
+  padding: 12px 2rem 8px;
   text-align: center;
   background: var(--color-light);
   width: fit-content;
@@ -9,8 +9,10 @@
   margin: 0 auto;
   font-weight: 600;
   font-size: 12px;
-  line-height: 1;
-  color: var(--color-blue-600);
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .alert-danger {
   border: 1px solid var(--color-secondary);
