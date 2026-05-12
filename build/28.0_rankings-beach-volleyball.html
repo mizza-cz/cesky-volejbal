@@ -702,49 +702,58 @@
 						<div class="subPage-content w-100">
 							<div class="subPage-menu">
 								<h1 class="h1">Turnaje - Beachvolejbal</h1>
-								<form action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543" method="post" id="frm-filterForm" class="subPageFilter w-100">
-									<label class="o-select subPageFilter__select w-sm-auto w-100">
-										<select name="placeId" id="frm-filterForm-placeId" class="js-select">
-											<option value="2" selected="selected">
-												celostátní - ABV
-											</option>
-											<option value="3">kraj - Praha</option>
-											<option value="4">kraj - Středočeský</option>
-											<option value="5">kraj - Jihočeský</option>
-											<option value="6">kraj - Plzeňský</option>
-											<option value="7">kraj - Karlovarský</option>
-											<option value="8">kraj - Ústecký</option>
-											<option value="9">kraj - Liberecký</option>
-											<option value="10">kraj - Královéhradecký</option>
-											<option value="11">kraj - Pardubický</option>
-											<option value="12">kraj - Olomoucký</option>
-											<option value="13">kraj - Moravskoslezský</option>
-											<option value="14">kraj - Jihomoravský</option>
-											<option value="15">kraj - Zlínský</option>
-											<option value="16">kraj - Vysočina</option>
-											<option value="17">mezinárodní</option>
-											<option value="18">Snowvolejbal</option>
-										</select>
-									</label>
-									<label class="o-select subPageFilter__select w-sm-auto w-100">
-										<select name="team" id="frm-filterForm-team" class="js-select">
-											<option value="M" selected="selected">ABV - muži</option>
-											<option value="Z">ABV - ženy</option>
-											<option value="JRI">ABV - U20 muži</option>
-											<option value="JKY">ABV - U20 ženy</option>
-											<option value="KTI">ABV - U18 muži</option>
-											<option value="KKY">ABV - U18 ženy</option>
-											<option value="ZCI">ABV - U16 muži</option>
-											<option value="ZKY">ABV - U16 ženy</option>
-										</select>
-									</label>
-									<input class="w-sm-auto w-100" type="text" placeholder="Jméno" />
-									<input type="hidden" name="_do" value="filterForm-submit" />
+								<div class="subPageFilter subPageFilter-row w-100 d-block">
+									<form action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543" method="post" id="frm-filterForm" class="row g-3">
+										<div class="col-xl-3 col-md-4 col-sm-6">
+											<label class="o-select subPageFilter__select w-sm-auto w-100">
+												<select name="placeId" id="frm-filterForm-placeId" class="js-select">
+													<option value="2" selected="selected">
+														celostátní - ABV
+													</option>
+													<option value="3">kraj - Praha</option>
+													<option value="4">kraj - Středočeský</option>
+													<option value="5">kraj - Jihočeský</option>
+													<option value="6">kraj - Plzeňský</option>
+													<option value="7">kraj - Karlovarský</option>
+													<option value="8">kraj - Ústecký</option>
+													<option value="9">kraj - Liberecký</option>
+													<option value="10">kraj - Královéhradecký</option>
+													<option value="11">kraj - Pardubický</option>
+													<option value="12">kraj - Olomoucký</option>
+													<option value="13">kraj - Moravskoslezský</option>
+													<option value="14">kraj - Jihomoravský</option>
+													<option value="15">kraj - Zlínský</option>
+													<option value="16">kraj - Vysočina</option>
+													<option value="17">mezinárodní</option>
+													<option value="18">Snowvolejbal</option>
+												</select>
+											</label>
+										</div>
+										<div class="col-xl-3 col-md-4 col-sm-6">
+											<label class="o-select subPageFilter__select w-sm-auto w-100">
+												<select name="team" id="frm-filterForm-team" class="js-select">
+													<option value="M" selected="selected">ABV - muži</option>
+													<option value="Z">ABV - ženy</option>
+													<option value="JRI">ABV - U20 muži</option>
+													<option value="JKY">ABV - U20 ženy</option>
+													<option value="KTI">ABV - U18 muži</option>
+													<option value="KKY">ABV - U18 ženy</option>
+													<option value="ZCI">ABV - U16 muži</option>
+													<option value="ZKY">ABV - U16 ženy</option>
+												</select>
+											</label>
+										</div>
+										<div class="col-xl-3 col-md-4">
+											<input class="w-100" type="text" placeholder="Jméno" />
+										</div>
 
-									<!--[if IE
-                ]><input type="IEbug" disabled style="display: none"
-              /><![endif]-->
-								</form>
+										<input type="hidden" name="_do" value="filterForm-submit" />
+
+										<!--[if IE
+                  ]><input type="IEbug" disabled style="display: none"
+                /><![endif]-->
+									</form>
+								</div>
 							</div>
 							<div class="o-content tableBox">
 								<table>

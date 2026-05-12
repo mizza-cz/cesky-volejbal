@@ -1,5 +1,5 @@
 {% extends "@components/base/base.twig" %} {% set title =
-"28.0_ranking-beach-volleyball" %} {% block main %}
+"35.0_referee-documents" %} {% block main %}
 <header class="header">
   <div class="header__top">
     <div class="container">
@@ -201,58 +201,97 @@
       <div class="subPage-grid">
         <div class="subPage-content w-100">
           <div class="subPage-menu">
-            <h1 class="h1">Turnaje - Beachvolejbal</h1>
+            <h1 class="h1">Listiny rozhodčích</h1>
             <div class="subPageFilter subPageFilter-row w-100 d-block">
               <form
-                action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543"
+                action="/"
                 method="post"
                 id="frm-filterForm"
                 class="row g-3"
               >
                 <div class="col-xl-3 col-md-4 col-sm-6">
-                  <label class="o-select subPageFilter__select w-sm-auto w-100">
+                  <label class="o-select subPageFilter__select w-100">
                     <select
-                      name="placeId"
-                      id="frm-filterForm-placeId"
+                      name="documentsId"
+                      id="frm-filterForm-documents"
                       class="js-select"
                     >
-                      <option value="2" selected="selected">
-                        celostátní - ABV
+                      <option value="98">ČVS - listina K</option>
+                      <option value="29">ČVS – delegáti A</option>
+                      <option value="30">ČVS – delegáti B</option>
+                      <option value="27">ČVS – LAJNAŘI</option>
+                      <option value="21" selected="selected">
+                        ČVS – listina A
                       </option>
-                      <option value="3">kraj - Praha</option>
-                      <option value="4">kraj - Středočeský</option>
-                      <option value="5">kraj - Jihočeský</option>
-                      <option value="6">kraj - Plzeňský</option>
-                      <option value="7">kraj - Karlovarský</option>
-                      <option value="8">kraj - Ústecký</option>
-                      <option value="9">kraj - Liberecký</option>
-                      <option value="10">kraj - Královéhradecký</option>
-                      <option value="11">kraj - Pardubický</option>
-                      <option value="12">kraj - Olomoucký</option>
-                      <option value="13">kraj - Moravskoslezský</option>
-                      <option value="14">kraj - Jihomoravský</option>
-                      <option value="15">kraj - Zlínský</option>
-                      <option value="16">kraj - Vysočina</option>
-                      <option value="17">mezinárodní</option>
-                      <option value="18">Snowvolejbal</option>
+                      <option value="22">ČVS – listina B</option>
+                      <option value="23">ČVS – listina C</option>
+                      <option value="24">ČVS – listina D</option>
+                      <option value="25">ČVS – listina EX</option>
+                      <option value="3">Hlavní město Praha</option>
+                      <option value="20">Jihočeský kraj</option>
+                      <option value="41">Jihomoravský kraj - všichni</option>
+                      <option value="104">JMK A</option>
+                      <option value="106">JMK B</option>
+                      <option value="107">JMK C</option>
+                      <option value="118">Karlovarský kraj</option>
+                      <option value="15">
+                        Královehradecký kraj - delegační
+                      </option>
+                      <option value="14">Královehradecký kraj - komplet</option>
+                      <option value="36">
+                        Královéhradecký kraj - okres Hradec Králové
+                      </option>
+                      <option value="16">
+                        Královehradecký kraj - okres Náchod
+                      </option>
+                      <option value="33">
+                        Královéhradecký kraj - okres RK
+                      </option>
+                      <option value="8">Liberecký kraj</option>
+                      <option value="133">
+                        Moravskoslezský kraj - aktivní 25/26
+                      </option>
+                      <option value="138">
+                        Moravskoslezský kraj - okres F-M 2025/26
+                      </option>
+                      <option value="54">
+                        Moravskoslezský kraj - okres OVA
+                      </option>
+                      <option value="38">Olomoucký kraj - aktivní</option>
+                      <option value="37">Olomoucký kraj - všichni</option>
+                      <option value="10">Pardubický kraj</option>
+                      <option value="13">Plzeňský kraj</option>
+                      <option value="12">Plzeňský kraj - Plzeň město</option>
+                      <option value="9">Středočeský kraj</option>
+                      <option value="11">Ústecký kraj</option>
+                      <option value="58">Vysočina - aktivní</option>
+                      <option value="51">Zlínský kraj A</option>
+                      <option value="52">Zlínský kraj A</option>
                     </select>
                   </label>
                 </div>
                 <div class="col-xl-3 col-md-4 col-sm-6">
                   <label class="o-select subPageFilter__select w-sm-auto w-100">
                     <select
-                      name="team"
-                      id="frm-filterForm-team"
+                      name="regionId"
+                      id="frm-filterForm-regionId"
                       class="js-select"
                     >
-                      <option value="M" selected="selected">ABV - muži</option>
-                      <option value="Z">ABV - ženy</option>
-                      <option value="JRI">ABV - U20 muži</option>
-                      <option value="JKY">ABV - U20 ženy</option>
-                      <option value="KTI">ABV - U18 muži</option>
-                      <option value="KKY">ABV - U18 ženy</option>
-                      <option value="ZCI">ABV - U16 muži</option>
-                      <option value="ZKY">ABV - U16 ženy</option>
+                      <option value="0" selected="selected">Neurčeno</option>
+                      <option value="1">Hlavní město Praha</option>
+                      <option value="2">Středočeský kraj</option>
+                      <option value="3">Jihočeský kraj</option>
+                      <option value="4">Plzeňský kraj</option>
+                      <option value="5">Karlovarský kraj</option>
+                      <option value="6">Ústecký kraj</option>
+                      <option value="7">Liberecký kraj</option>
+                      <option value="8">Královéhradecký kraj</option>
+                      <option value="9">Pardubický kraj</option>
+                      <option value="10">Kraj Vysočina</option>
+                      <option value="11">Jihomoravský kraj</option>
+                      <option value="12">Olomoucký kraj</option>
+                      <option value="13">Zlínský kraj</option>
+                      <option value="14">Moravskoslezský kraj</option>
                     </select>
                   </label>
                 </div>
@@ -269,197 +308,183 @@
             </div>
           </div>
           <div class="o-content tableBox">
-            <table>
-              <colgroup>
-                <col style="width: 50px" />
-                <col />
-                <col />
-                <col style="width: 120x" />
-              </colgroup>
+            <table class="tablTournaments">
               <thead>
                 <tr>
-                  <th class="text-center">#</th>
-                  <th class="text-start">Hráč</th>
-                  <th class="text-start">Oddíl</th>
-                  <th class="text-center">Body</th>
+                  <th class="text-start">Jméno</th>
+                  <th class="text-start">Třída</th>
+                  <th class="text-center">Listina</th>
+                  <th class="text-center">Kraj</th>
+                  <th class="text-center">Kontakt</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="text-center">1</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Ondřej Perušič</a>
+                    <a href="#" class="fw-bold text-primary">Činátl Dominik</a>
                   </td>
-                  <td class="text-start">
-                    Dráčkova jazyková mateřská škola Beachclub Strahov, z.s.
-                  </td>
-                  <td class="text-center text-primary">3008</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Hlavní město Praha</td>
+                  <td class="text-center">777665591</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">2</td>
                   <td class="text-start">
-                    <a class="h6" href="#">David Schweiner</a>
+                    <a href="#" class="fw-bold text-primary">Činátl Jakub</a>
                   </td>
-                  <td class="text-start">
-                    Dráčkova jazyková mateřská škola Beachclub Strahov, z.s.
-                  </td>
-                  <td class="text-center text-primary">2938</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Hlavní město Praha</td>
+                  <td class="text-center">777665519</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">3</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Tadeáš Trousil</a>
+                    <a href="#" class="fw-bold text-primary"
+                      >Ištvanech Marián</a
+                    >
                   </td>
-                  <td class="text-start">Beachvolejbalová škola Praha, z.s.</td>
-                  <td class="text-center text-primary">2813</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Moravskoslezský kraj</td>
+                  <td class="text-center">720137509</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">4</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Jiří Sedlák</a>
+                    <a href="#" class="fw-bold text-primary">Jusič Alen</a>
                   </td>
-                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
-                  <td class="text-center text-primary">2813</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Hlavní město Praha</td>
+                  <td class="text-center">739537904</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">5</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Matyáš Dzavoronok</a>
+                    <a href="#" class="fw-bold text-primary">Kohlmann Tomáš</a>
                   </td>
-                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
-                  <td class="text-center text-primary">2550</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Hlavní město Praha</td>
+                  <td class="text-center">776422020</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">6</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Jakub Šépka</a>
+                    <a href="#" class="fw-bold text-primary"
+                      >Král Hladisová Michaela</a
+                    >
                   </td>
-                  <td class="text-start">Prague beach team, z.s.</td>
-                  <td class="text-center text-primary">2488</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Hlavní město Praha</td>
+                  <td class="text-center">733320604</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">7</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Tomáš Semerád</a>
+                    <a href="#" class="fw-bold text-primary">Kubinec Jan</a>
                   </td>
-                  <td class="text-start">Beachvolejbalová škola Praha, z.s.</td>
-                  <td class="text-center text-primary">1890</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Moravskoslezský kraj</td>
+                  <td class="text-center">737342751</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">8</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Adam Štoček</a>
+                    <a href="#" class="fw-bold text-primary"
+                      >Lobo Machado Olga</a
+                    >
                   </td>
-                  <td class="text-start">
-                    Dráčkova jazyková mateřská škola Beachclub Strahov, z.s.
-                  </td>
-                  <td class="text-center text-primary">1890</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Hlavní město Praha</td>
+                  <td class="text-center">604534157</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">9</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Kryštof Jan Oliva</a>
+                    <a href="#" class="fw-bold text-primary">Mertl Jakub</a>
                   </td>
-                  <td class="text-start">
-                    Dráčkova jazyková mateřská škola Beachclub Strahov, z.s.
-                  </td>
-                  <td class="text-center text-primary">1213</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Moravskoslezský kraj</td>
+                  <td class="text-center">774568658</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">10</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Václav Kurka</a>
+                    <a href="#" class="fw-bold text-primary"
+                      >Němeček Ladislav</a
+                    >
                   </td>
-                  <td class="text-start">
-                    Dráčkova jazyková mateřská škola Beachclub Strahov, z.s.
-                  </td>
-                  <td class="text-center text-primary">1171</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Olomoucký kraj</td>
+                  <td class="text-center">776721727</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">11</td>
                   <td class="text-start">
-                    <a class="h6" href="#">David Westphal</a>
+                    <a href="#" class="fw-bold text-primary">Peloušek Jiří</a>
                   </td>
-                  <td class="text-start">
-                    Volejbalová akademie mládeže Olomouc, z.s.
-                  </td>
-                  <td class="text-center text-primary">1109</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Olomoucký kraj</td>
+                  <td class="text-center">724185087</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">12</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Matyáš Ježek</a>
+                    <a href="#" class="fw-bold text-primary">Poláček Jan</a>
                   </td>
-                  <td class="text-start">
-                    Volejbalový klub Odolena Voda, z.s.
-                  </td>
-                  <td class="text-center text-primary">1099</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Hlavní město Praha</td>
+                  <td class="text-center">728384543</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">13</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Martin Melmuka</a>
+                    <a href="#" class="fw-bold text-primary">Pytela Jiří</a>
                   </td>
-                  <td class="text-start">
-                    Dráčkova jazyková mateřská škola Beachclub Strahov, z.s.
-                  </td>
-                  <td class="text-center text-primary">1084</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Zlínský kraj</td>
+                  <td class="text-center">724707432</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">14</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Jan Dumek</a>
+                    <a href="#" class="fw-bold text-primary">Slezák Jan</a>
                   </td>
-                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
-                  <td class="text-center text-primary">1053</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Moravskoslezský kraj</td>
+                  <td class="text-center">604358588</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">15</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Adam Waber</a>
+                    <a href="#" class="fw-bold text-primary">Trumpeš Daniel</a>
                   </td>
-                  <td class="text-start">Beachvolejbalová škola Praha, z.s.</td>
-                  <td class="text-center text-primary">998</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Jihomoravský kraj</td>
+                  <td class="text-center">724947460</td>
                 </tr>
+
                 <tr>
-                  <td class="text-center">16</td>
                   <td class="text-start">
-                    <a class="h6" href="#">Martin Pihera</a>
+                    <a href="#" class="fw-bold text-primary">Vachutka Milan</a>
                   </td>
-                  <td class="text-start">Beachvolejbalová škola Praha, z.s.</td>
-                  <td class="text-center text-primary">905</td>
-                </tr>
-                <tr>
-                  <td class="text-center">17</td>
-                  <td class="text-start">
-                    <a class="h6" href="#">Jan Berčík</a>
-                  </td>
-                  <td class="text-start">Prague beach team, z.s.</td>
-                  <td class="text-center text-primary">836</td>
-                </tr>
-                <tr>
-                  <td class="text-center">18</td>
-                  <td class="text-start">
-                    <a class="h6" href="#">Václav Berčík</a>
-                  </td>
-                  <td class="text-start">Tělocvičná jednota Sokol Brno I</td>
-                  <td class="text-center text-primary">782</td>
-                </tr>
-                <tr>
-                  <td class="text-center">19</td>
-                  <td class="text-start">
-                    <a class="h6" href="#">Lukáš Olšanský</a>
-                  </td>
-                  <td class="text-start">Prague beach team, z.s.</td>
-                  <td class="text-center text-primary">617</td>
-                </tr>
-                <tr>
-                  <td class="text-center">20</td>
-                  <td class="text-start">
-                    <a class="h6" href="#">Tobiáš Brňák</a>
-                  </td>
-                  <td class="text-start">Prague beach team, z.s.</td>
-                  <td class="text-center text-primary">615</td>
+                  <td class="text-start">1</td>
+                  <td class="text-center">A</td>
+                  <td class="text-center">Jihomoravský kraj</td>
+                  <td class="text-center">606731454</td>
                 </tr>
               </tbody>
             </table>

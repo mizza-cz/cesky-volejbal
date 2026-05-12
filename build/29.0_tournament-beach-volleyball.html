@@ -702,99 +702,100 @@
 						<div class="subPage-content w-100">
 							<div class="subPage-menu">
 								<h1 class="h1">Turnaje - Beachvolejbal</h1>
+								<div class="subPageFilter subPageFilter-row w-100 d-block">
+									<form action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543" method="post" id="frm-filterForm" class="row g-3">
+										<div class="col-lg-3 col-sm-6">
+											<label class="o-select subPageFilter__select w-100">
+												<select name="yearId" id="frm-filterForm-year" class="js-select">
+													<option value="">Všechny roky</option>
+													<option value="2026">2026</option>
+													<option value="2025">2025</option>
+													<option value="2024">2024</option>
+													<option value="2023">2023</option>
+													<option value="2022">2022</option>
+													<option value="2021">2021</option>
+													<option value="2020">2020</option>
+													<option value="2019">2019</option>
+													<option value="2018">2018</option>
+													<option value="2017">2017</option>
+													<option value="2016">2016</option>
+													<option value="2015">2015</option>
+													<option value="2014">2014</option>
+													<option value="2013">2013</option>
+													<option value="2012">2012</option>
+													<option value="2011">2011</option>
+													<option value="2010">2010</option>
+												</select>
+											</label>
+										</div>
+										<div class="col-lg-3 col-sm-6">
+											<label class="o-select subPageFilter__select w-sm-auto w-100">
+												<select name="monthId" id="frm-filterForm-monthId" class="js-select">
+													<option value="">Všechny měsíce</option>
+													<option value="1">Leden</option>
+													<option value="2">Únor</option>
+													<option value="3">Březen</option>
+													<option value="4">Duben</option>
+													<option value="5">Květen</option>
+													<option value="6">Červen</option>
+													<option value="7">Červenec</option>
+													<option value="8">Srpen</option>
+													<option value="9">Září</option>
+													<option value="10">Říjen</option>
+													<option value="11">Listopad</option>
+													<option value="12">Prosinec</option>
+												</select>
+											</label>
+										</div>
+										<div class="col-lg-3 col-sm-6">
+											<label class="o-select subPageFilter__select w-sm-auto w-100">
+												<select name="categorieId" id="frm-filterForm-categorieId" class="js-select">
+													<option value="">Všechny kategorie</option>
+													<option value="Muži">Muži</option>
+													<option value="Ženy">Ženy</option>
+													<option value="Junioři">U20 muži</option>
+													<option value="Juniorky">U20 ženy</option>
+													<option value="Kadeti">U18 muži</option>
+													<option value="Kadetky">U18 ženy</option>
+													<option value="Žáci">U16 muži</option>
+													<option value="Žákyně">U16 ženy</option>
+													<option value="Smíšené">Chlapci + dívky</option>
+													<option value="vlastni">Vlastní</option>
+												</select>
+											</label>
+										</div>
+										<div class="col-lg-3 col-sm-6">
+											<label class="o-select subPageFilter__select w-sm-auto w-100">
+												<select name="placeId" id="frm-filterForm-placeId" class="js-select">
+													<option value="">Všechny šložky</option>
+													<option value="2">celostátní - ABV</option>
+													<option value="3">kraj - Praha</option>
+													<option value="4">kraj - Středočeský</option>
+													<option value="5">kraj - Jihočeský</option>
+													<option value="6">kraj - Plzeňský</option>
+													<option value="7">kraj - Karlovarský</option>
+													<option value="8">kraj - Ústecký</option>
+													<option value="9">kraj - Liberecký</option>
+													<option value="10">kraj - Královéhradecký</option>
+													<option value="11">kraj - Pardubický</option>
+													<option value="12">kraj - Olomoucký</option>
+													<option value="13">kraj - Moravskoslezský</option>
+													<option value="14">kraj - Jihomoravský</option>
+													<option value="15">kraj - Zlínský</option>
+													<option value="16">kraj - Vysočina</option>
+													<option value="17">mezinárodní</option>
+													<option value="18">Snowvolejbal</option>
+												</select>
+											</label>
+										</div>
 
-								<form action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543" method="post" id="frm-filterForm" class="subPageFilter subPageFilter-row w-100 row gap-0 g-3">
-									<div class="col-md-3 col-sm-6">
-										<label class="o-select subPageFilter__select w-100">
-											<select name="yearId" id="frm-filterForm-year" class="js-select">
-												<option value="">Všechny roky</option>
-												<option value="2026">2026</option>
-												<option value="2025">2025</option>
-												<option value="2024">2024</option>
-												<option value="2023">2023</option>
-												<option value="2022">2022</option>
-												<option value="2021">2021</option>
-												<option value="2020">2020</option>
-												<option value="2019">2019</option>
-												<option value="2018">2018</option>
-												<option value="2017">2017</option>
-												<option value="2016">2016</option>
-												<option value="2015">2015</option>
-												<option value="2014">2014</option>
-												<option value="2013">2013</option>
-												<option value="2012">2012</option>
-												<option value="2011">2011</option>
-												<option value="2010">2010</option>
-											</select>
-										</label>
-									</div>
-									<div class="col-md-3 col-sm-6">
-										<label class="o-select subPageFilter__select w-sm-auto w-100">
-											<select name="monthId" id="frm-filterForm-monthId" class="js-select">
-												<option value="">Všechny měsíce</option>
-												<option value="1">Leden</option>
-												<option value="2">Únor</option>
-												<option value="3">Březen</option>
-												<option value="4">Duben</option>
-												<option value="5">Květen</option>
-												<option value="6">Červen</option>
-												<option value="7">Červenec</option>
-												<option value="8">Srpen</option>
-												<option value="9">Září</option>
-												<option value="10">Říjen</option>
-												<option value="11">Listopad</option>
-												<option value="12">Prosinec</option>
-											</select>
-										</label>
-									</div>
-									<div class="col-md-3 col-sm-6">
-										<label class="o-select subPageFilter__select w-sm-auto w-100">
-											<select name="categorieId" id="frm-filterForm-categorieId" class="js-select">
-												<option value="">Všechny kategorie</option>
-												<option value="Muži">Muži</option>
-												<option value="Ženy">Ženy</option>
-												<option value="Junioři">U20 muži</option>
-												<option value="Juniorky">U20 ženy</option>
-												<option value="Kadeti">U18 muži</option>
-												<option value="Kadetky">U18 ženy</option>
-												<option value="Žáci">U16 muži</option>
-												<option value="Žákyně">U16 ženy</option>
-												<option value="Smíšené">Chlapci + dívky</option>
-												<option value="vlastni">Vlastní</option>
-											</select>
-										</label>
-									</div>
-									<div class="col-md-3 col-sm-6">
-										<label class="o-select subPageFilter__select w-sm-auto w-100">
-											<select name="placeId" id="frm-filterForm-placeId" class="js-select">
-												<option value="">Všechny šložky</option>
-												<option value="2">celostátní - ABV</option>
-												<option value="3">kraj - Praha</option>
-												<option value="4">kraj - Středočeský</option>
-												<option value="5">kraj - Jihočeský</option>
-												<option value="6">kraj - Plzeňský</option>
-												<option value="7">kraj - Karlovarský</option>
-												<option value="8">kraj - Ústecký</option>
-												<option value="9">kraj - Liberecký</option>
-												<option value="10">kraj - Královéhradecký</option>
-												<option value="11">kraj - Pardubický</option>
-												<option value="12">kraj - Olomoucký</option>
-												<option value="13">kraj - Moravskoslezský</option>
-												<option value="14">kraj - Jihomoravský</option>
-												<option value="15">kraj - Zlínský</option>
-												<option value="16">kraj - Vysočina</option>
-												<option value="17">mezinárodní</option>
-												<option value="18">Snowvolejbal</option>
-											</select>
-										</label>
-									</div>
+										<input type="hidden" name="_do" value="filterForm-submit" />
 
-									<input type="hidden" name="_do" value="filterForm-submit" />
-
-									<!--[if IE
-                ]><input type="IEbug" disabled style="display: none"
-              /><![endif]-->
-								</form>
+										<!--[if IE
+                  ]><input type="IEbug" disabled style="display: none"
+                /><![endif]-->
+									</form>
+								</div>
 							</div>
 							<div class="o-content tableBox">
 								<table class="tablTournaments">
