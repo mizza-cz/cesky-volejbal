@@ -1,0 +1,524 @@
+{% extends "@components/base/base.twig" %} {% set title = "36.0_list-of-clubs"
+%} {% block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Extraliga</div>
+      </div>
+    </div>
+  </div>
+</header>
+{% include "@components/scoreboard/scoreboard.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        <div class="subPage-content w-100">
+          <div class="subPage-menu">
+            <h1 class="h1">Seznam klubů</h1>
+            <div class="subPageFilter subPageFilter-row w-100 d-block">
+              <form
+                action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543"
+                method="post"
+                id="frm-filterForm"
+                class="row g-3"
+              >
+                <div class="col-lg-3 col-sm-6">
+                  <label class="o-select subPageFilter__select w-sm-auto w-100">
+                    <select
+                      name="placeId"
+                      id="frm-filterForm-krajId"
+                      class="js-select"
+                    >
+                      <option value="">Všechny</option>
+                      <option value="3">kraj - Praha</option>
+                      <option value="4">kraj - Středočeský</option>
+                      <option value="5">kraj - Jihočeský</option>
+                      <option value="6">kraj - Plzeňský</option>
+                      <option value="7">kraj - Karlovarský</option>
+                      <option value="8">kraj - Ústecký</option>
+                      <option value="9">kraj - Liberecký</option>
+                      <option value="10">kraj - Královéhradecký</option>
+                      <option value="11">kraj - Pardubický</option>
+                      <option value="12">kraj - Olomoucký</option>
+                      <option value="13">kraj - Moravskoslezský</option>
+                      <option value="14">kraj - Jihomoravský</option>
+                      <option value="15">kraj - Zlínský</option>
+                      <option value="16">kraj - Vysočina</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="col-xl-3 col-md-4">
+                  <input class="w-100" type="text" placeholder="Název" />
+                </div>
+                <input type="hidden" name="_do" value="filterForm-submit" />
+
+                <!--[if IE
+                  ]><input type="IEbug" disabled style="display: none"
+                /><![endif]-->
+              </form>
+            </div>
+          </div>
+          <div class="o-content tableBox">
+            <table class="tablTournaments">
+              <thead>
+                <tr>
+                  <th class="text-start">IČ Oddílu</th>
+                  <th class="text-start">Název</th>
+                  <th class="text-start">Web</th>
+                  <th class="text-start">E-mail</th>
+                  <th class="text-start">Telefon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-start">44224001</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Tělocvičná jednota Sokol Český Dub</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">skoda.cdub@seznam.cz</td>
+                  <td class="text-start">+420728060020</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">22852565</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">"SK EKO"</a>
+                  </td>
+                  <td class="text-start">
+                    <a href="www.skeko.estranky.cz">www.skeko.estranky.cz</a>
+                  </td>
+                  <td class="text-start">lukas.koucky@centrum.cz</td>
+                  <td class="text-start">605560958</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">01709844</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >"VK Ostrava Jih"</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">l.trojek@gmail.com</td>
+                  <td class="text-start">723446744</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">22604758</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >"VK SOU Ostrava"</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">tomas.hermann@seznam.cz</td>
+                  <td class="text-start">776285559</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">62832514</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >1. AC Uherský Brod, z.s.</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">info@zsvin.cz</td>
+                  <td class="text-start">572634321</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">45332738</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >1. Sport Club Beach Plzeň, z.s.</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    <a href="www.1scbeachplzen.cz">www.1scbeachplzen.cz</a>
+                  </td>
+                  <td class="text-start">zemanp@plzen.eu</td>
+                  <td class="text-start">773517890</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">16982223</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >1. SVC Rakovník, z.s.</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">info.pnemecek@gmail.com</td>
+                  <td class="text-start">724639127</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">12909481</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Krajský volejbalový svaz Vysočina</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start"></td>
+                  <td class="text-start"></td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">21704333</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Ace Volleyball Academy z.s.</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">acevba@gmail.com</td>
+                  <td class="text-start">775918035</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">24737151</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">AOV s.r.o</a>
+                  </td>
+                  <td class="text-start">
+                    <a href="kladno.volejbal.cz">kladno.volejbal.cz</a>
+                  </td>
+                  <td class="text-start">mr.forbes@volny.cz</td>
+                  <td class="text-start">739549009</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">07084501</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary">ASK Dipoli z.s.</a>
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">tomas.vodicka@askdipoli.cz</td>
+                  <td class="text-start">+420776366426</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">18380468</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Asociace sportovních klubů Lovosice z.s.</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">jarkaven@seznam.cz</td>
+                  <td class="text-start">721683092</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">48137171</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Basket Slovanka, z.s.</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start"></td>
+                  <td class="text-start"></td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">03417581</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >BEACH ACADEMY VIKTORIA BRNO, z.s.</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    <a href="www.beachacademy.cz">www.beachacademy.cz</a>
+                  </td>
+                  <td class="text-start">borek@beachacademy.cz</td>
+                  <td class="text-start">774444879</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">22675264</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Beach Aréna Ústí n. L., z.s.</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    <a href="www.beacharenausti.cz">www.beacharenausti.cz</a>
+                  </td>
+                  <td class="text-start">beacharenausti@seznam.cz</td>
+                  <td class="text-start">606404946</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">44992599</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Beach club Brno z.s.</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">z.vaclavik@volny.cz</td>
+                  <td class="text-start">774370227</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">04282680</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Beach club Harcov - Liberec, z.s.</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    <a href="www.beachliberec.cz">www.beachliberec.cz</a>
+                  </td>
+                  <td class="text-start">halaharcov@seznam.cz</td>
+                  <td class="text-start">602279624</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">03886751</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >BEACH CLUB HRANICE, spolek</a
+                    >
+                  </td>
+                  <td class="text-start">
+                    <a href="www.beachclubhranice.cz"
+                      >www.beachclubhranice.cz</a
+                    >
+                  </td>
+                  <td class="text-start">beachclubhranice@gmail.com</td>
+                  <td class="text-start">776397638</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start">01475550</td>
+                  <td class="text-start">
+                    <a href="#" class="fw-bold text-primary"
+                      >Beach Service club z.s.</a
+                    >
+                  </td>
+                  <td class="text-start"></td>
+                  <td class="text-start">info@beachservice.cz</td>
+                  <td class="text-start">605473552</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {% include "@components/pagination/pagination.twig" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}

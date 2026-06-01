@@ -1,0 +1,422 @@
+{% extends "@components/base/base.twig" %} {% set title = "37.0_club-detail" %}
+{% block main %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-row">
+        <ul class="header__assn">
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/fivb.svg" loading="lazy" alt="fivb" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank">
+              <img src="images/ico/cev.svg" loading="lazy" alt="cev" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__media">
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-row">
+        <a class="header__logo" href="">
+          <img src="images/ico/logo.svg" loading="lazy" alt="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__menu">
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Novinky </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> ČVS </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> REPREZENTACE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <div class="navbar__menu-item">Extraliga</div>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu__list">
+                  <a href="#">Články</a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Zápasy & výsledky </a>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    id="multilevel"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                    >Statistiky
+                  </a>
+                  <ul
+                    class="dropdown-submenu dropdown-menu"
+                    aria-labelledby="multilevel"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__list">
+                  <a href="#">Dokumenty </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> SOUTĚŽE </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> BEACHvolejbal </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Mládež </a>
+            </li>
+            <li class="navbar__menu-list">
+              <a href="#" class="navbar__menu-item"> Vzdělávání </a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/coins.svg" loading="lazy" alt="coins" />
+                Dotace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/ball.svg" loading="lazy" alt="ball" />
+                Paravolejbal
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img
+                  src="images/ico/rozhodci.svg"
+                  loading="lazy"
+                  alt="rozhodci"
+                />
+                Rozhodčí
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/nadace.svg" loading="lazy" alt="nadace" />
+                Nadace
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/play.svg" loading="lazy" alt="play" />
+                Volej.tv
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" ">
+                <img src="images/ico/vis.svg" loading="lazy" alt="vis" />
+                VIS
+              </a>
+            </li>
+          </ul>
+          {% include "@components/social/social.twig" %}
+        </nav>
+        <div id="mobile-search" class="searchBox">
+          <form>
+            <input type="text" placeholder="Najít na stránce" required />
+            <button type="submit" class="btn">Hledat</button>
+          </form>
+        </div>
+        <a href="#" class="header__search">
+          <img src="images/ico/search.svg" alt="search" />
+        </a>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+        <div id="subMenuBtn">Extraliga</div>
+      </div>
+    </div>
+  </div>
+</header>
+{% include "@components/scoreboard/scoreboard.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subPage">
+    <div class="container">
+      <div class="subPage-grid">
+        {% include "@components/aside/asideMenu-extraliga.twig" %}
+        <div class="subPage-content">
+          <div class="detailBox clubDetailBox mb-4">
+            <img
+              class="clubDetailBox-img"
+              src="images/content/club-detail.png"
+              width="160"
+              height="160"
+              alt=""
+            />
+            <div class="d-flex flex-column gap-3">
+              <h1 class="h3">VK Jihostroj České Budějovice</h1>
+              <ul class="detailBox__list">
+                <li class="detailBox__item">
+                  <div class="p1 fw-bold">Adresa:</div>
+                  <div class="p1">
+                    TJ Sokol Brno, Kounicova 686 Brno - Veveří, 602 00
+                  </div>
+                </li>
+                <li class="detailBox__item">
+                  <div class="p1 fw-bold">IČ oddílu:</div>
+                  <div class="p1">22604758</div>
+                </li>
+                <li class="detailBox__item">
+                  <div class="p1 fw-bold">Telefon:</div>
+                  <div class="p1">776285559;602600095</div>
+                </li>
+                <li class="detailBox__item">
+                  <div class="p1 fw-bold">Číslo účtu:</div>
+                  <div class="p1">174174174/2010 v.č.647353</div>
+                </li>
+                <li class="detailBox__item">
+                  <div class="p1 fw-bold">E-mail:</div>
+                  <div class="p1">tomas.hermann@seznam.cz,kavala@cvf.cz</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul
+            class="nav nav-tabs clubDetail-tabs"
+            id="clubDetailTabs"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="team-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#team"
+                type="button"
+                role="tab"
+              >
+                Družstva
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="persons-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#persons"
+                type="button"
+                role="tab"
+              >
+                Odpovědné osoby
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="clubDetailContent">
+            <div class="tab-pane fade show active" id="team" role="tabpanel">
+              <div class="o-content tableBox">
+                <table class="tablTournaments">
+                  <thead>
+                    <tr>
+                      <th class="text-start">Název soutěže</th>
+                      <th class="text-start">Název drusžtva</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary"
+                          >VK SOU Ostrava</a
+                        >
+                      </td>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary">
+                          OV-M SOU Ostrava
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary"
+                          >ČEZ Extraliga muži</a
+                        >
+                      </td>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary">
+                          ASK Dipoli z.s.
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary"
+                          >VK SOU Ostrava</a
+                        >
+                      </td>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary">
+                          OV-M SOU Ostrava
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary"
+                          >ČEZ Extraliga muži</a
+                        >
+                      </td>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary">
+                          ASK Dipoli z.s.
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary"
+                          >VK SOU Ostrava</a
+                        >
+                      </td>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary">
+                          OV-M SOU Ostrava
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary"
+                          >ČEZ Extraliga muži</a
+                        >
+                      </td>
+                      <td class="text-start">
+                        <a href="#" class="fw-bold text-primary">
+                          ASK Dipoli z.s.
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="persons" role="tabpanel">
+              <div class="o-content tableBox">
+                <table class="tablTournaments">
+                  <thead>
+                    <tr>
+                      <th class="text-start">Jméno a příjmení</th>
+                      <th class="text-start">Rozsah práv</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-start fw-bold text-primary">
+                        Matouš Müller
+                      </td>
+                      <td class="text-start">Odpovědná osoba družstva</td>
+                    </tr>
+                    <tr>
+                      <td class="text-start fw-bold text-primary">
+                        Matouš Müller
+                      </td>
+                      <td class="text-start">Odpovědná osoba družstva</td>
+                    </tr>
+                    <tr>
+                      <td class="text-start fw-bold text-primary">
+                        Matouš Müller
+                      </td>
+                      <td class="text-start">Odpovědná osoba družstva</td>
+                    </tr>
+                    <tr>
+                      <td class="text-start fw-bold text-primary">
+                        Matouš Müller
+                      </td>
+                      <td class="text-start">Odpovědná osoba družstva</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mb-6">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="pub" href="#" target="_blank">
+            <img src="images/content/banner-1.png" loading="lazy" alt="pub" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "@components/posts/posts.twig" %} {% include
+"@components/partners/partners.twig" %} {% include
+"@components/footer/footer.twig" %} {% endblock %}
