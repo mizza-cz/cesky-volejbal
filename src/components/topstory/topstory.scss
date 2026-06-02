@@ -1,6 +1,17 @@
+.TopStories {
+  position: relative;
+  overflow: hidden;
+  height: 760px;
+
+  @include media-breakpoint-down(lg) {
+    height: 560px;
+  }
+}
+
 .TopStory {
   display: none;
   height: 100%;
+  position: relative;
 
   &.is-active {
     display: flex;
@@ -8,31 +19,25 @@
 
   &::after {
     content: "";
-    display: block;
-    width: 100%;
-    height: 50%;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     background: linear-gradient(180deg, rgba(16, 45, 105, 0) 35%, #102d69 100%);
-
     z-index: 1;
   }
 
-  &-imgPlaceholder,
-  &-img {
+  &-img,
+  &-imgPlaceholder {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     object-fit: cover;
     object-position: center top;
-    z-index: 1;
   }
 
   &-img {
     opacity: 0;
+    z-index: 0;
 
     &.is-active {
       opacity: 1;
@@ -41,103 +46,123 @@
 
   &-imgPlaceholder {
     display: none;
+    filter: blur(10px);
+    z-index: 0;
 
     &.is-active {
       display: block;
-      filter: blur(10px);
-      transform: scale(1);
-      z-index: 2;
     }
   }
 
-  &-content {
-    align-self: flex-end;
+  .container {
     position: relative;
-    padding: 2.5rem 0 80px;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &-content {
+    max-width: 960px;
+    padding-bottom: 64px;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+    time {
+      color: #fff;
+      font-weight: 400;
+      font-size: 1rem;
+    }
   }
 
   &-title {
     color: #fff;
+    max-width: 900px;
 
     a {
+      color: inherit;
       text-decoration-color: transparent;
-      &:focus,
-      &:hover {
-        text-decoration-thickness: 0.25rem;
+
+      &:hover,
+      &:focus {
         text-decoration-color: inherit;
+        text-decoration-thickness: 0.25rem;
       }
     }
   }
 }
 
-@keyframes showTopStory {
-  from {
-    opacity: 0.5;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-.TopStories {
-  overflow: hidden;
-  position: relative;
-}
-.dots-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+.TopStories-nav {
   position: absolute;
-  bottom: 48px;
+  right: max(32px, calc((100vw - 1320px) / 2));
+  bottom: 72px;
   z-index: 4;
-  left: 0;
-  max-width: 74%;
-  width: 100%;
   display: flex;
-  justify-content: center;
+  gap: 8px;
+
   @include media-breakpoint-down(lg) {
     display: none;
   }
 }
-.dots {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-.dot {
-  position: relative;
-  width: 10px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  overflow: hidden;
-}
 
-.progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0s;
-}
-.dot.is-active {
-  width: 32px;
-  border-radius: 20px;
-}
-.dot.is-active .progress {
-  animation: fill 4s linear forwards; /* Анимация длится 5 секунд */
+.dot {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--color-light);
+  padding: 0 12px 8px 0;
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  transition: all 0.4s ease;
+  span {
+    display: block;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: var(--color-light);
+  }
+
+  &.is-active {
+    color: var(--color-secondary);
+    padding-right: 44px;
+    &::after {
+      animation: fill 4s linear forwards;
+      background: var(--color-secondary);
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+    }
+  }
 }
 
 @keyframes fill {
   from {
-    transform: scaleX(0);
+    width: 0;
   }
+
   to {
-    transform: scaleX(1);
+    width: 100%;
   }
 }
