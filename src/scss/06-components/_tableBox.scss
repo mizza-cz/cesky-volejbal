@@ -34,3 +34,11 @@
 .tablTournaments td a {
   white-space: normal;
 }
+.table-gap {
+  height: 40px;
+  border: 0 !important;
+  padding: 0;
+  td {
+    border: none;
+  }
+}
