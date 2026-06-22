@@ -62,14 +62,17 @@
 }
 
 .postVideo {
+  .post__img {
+    aspect-ratio: 16/9;
+  }
   .post__img::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
     background-image: url("../images/ico/play-video.svg");
     background-repeat: no-repeat;
     background-size: contain;
