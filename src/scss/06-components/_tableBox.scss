@@ -42,3 +42,7 @@
     border: none;
   }
 }
+.tablPairs .row-strike td,
+.tablPairs .row-strike td * {
+  text-decoration: line-through !important;
+}
