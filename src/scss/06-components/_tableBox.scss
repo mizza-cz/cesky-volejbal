@@ -15,6 +15,10 @@
 
   td {
     padding: 8px 12px;
+    vertical-align: middle;
+    img {
+      vertical-align: middle;
+    }
   }
   td {
     border-bottom: 1px solid var(--color-line);
@@ -45,4 +49,7 @@
 .tablPairs .row-strike td,
 .tablPairs .row-strike td * {
   text-decoration: line-through !important;
+}
+.nowrap {
+  white-space: nowrap;
 }
