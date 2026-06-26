@@ -704,7 +704,7 @@
 								<h1 class="h1">Listiny rozhodčích</h1>
 								<div class="subPageFilter subPageFilter-row w-100 d-block">
 									<form action="/" method="post" id="frm-filterForm" class="row g-3">
-										<div class="col-xl-3 col-md-4 col-sm-6">
+										<div class="col-md-3 col-sm-6">
 											<label class="o-select subPageFilter__select w-100">
 												<select name="documentsId" id="frm-filterForm-documents" class="js-select">
 													<option value="98">ČVS - listina K</option>
@@ -761,7 +761,7 @@
 												</select>
 											</label>
 										</div>
-										<div class="col-xl-3 col-md-4 col-sm-6">
+										<div class="col-md-3 col-sm-6">
 											<label class="o-select subPageFilter__select w-sm-auto w-100">
 												<select name="regionId" id="frm-filterForm-regionId" class="js-select">
 													<option value="0" selected="selected">Neurčeno</option>
@@ -782,8 +782,11 @@
 												</select>
 											</label>
 										</div>
-										<div class="col-xl-3 col-md-4">
-											<input class="w-100" type="text" placeholder="Jméno" />
+										<div class="col-md-6">
+											<div class="subPageFilter__search">
+												<input class="w-100" type="text" placeholder="Jméno" />
+												<button class="subPageFilter__btn">Hledat</button>
+											</div>
 										</div>
 
 										<input type="hidden" name="_do" value="filterForm-submit" />

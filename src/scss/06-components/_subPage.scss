@@ -89,4 +89,20 @@
     background-color: var(--color-primary);
     color: var(--color-light);
   }
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      min-width: 320px;
+      @include media-breakpoint-down(md) {
+        min-width: 0;
+        flex: 1;
+      }
+    }
+  }
 }

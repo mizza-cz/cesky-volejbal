@@ -704,7 +704,7 @@
 								<h1 class="h1">Seznam klubů</h1>
 								<div class="subPageFilter subPageFilter-row w-100 d-block">
 									<form action="/souteze/celostatni-souteze?competitionId=18356&amp;mode=results&amp;filteredGroupId=26543" method="post" id="frm-filterForm" class="row g-3">
-										<div class="col-lg-3 col-sm-6">
+										<div class="col-lg-3 col-md-6">
 											<label class="o-select subPageFilter__select w-sm-auto w-100">
 												<select name="placeId" id="frm-filterForm-krajId" class="js-select">
 													<option value="">Všechny</option>
@@ -725,8 +725,11 @@
 												</select>
 											</label>
 										</div>
-										<div class="col-xl-3 col-md-4">
-											<input class="w-100" type="text" placeholder="Název" />
+										<div class="col-xl-4 col-md-6">
+											<div class="subPageFilter__search">
+												<input class="w-100" type="text" placeholder="Název" />
+												<button class="subPageFilter__btn">Hledat</button>
+											</div>
 										</div>
 										<input type="hidden" name="_do" value="filterForm-submit" />
 
