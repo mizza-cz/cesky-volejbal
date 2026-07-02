@@ -177,7 +177,8 @@
       &:last-child .navbar__menu-item {
         border-right: 1px solid var(--color-line);
         @include media-breakpoint-down(xl) {
-          display: none;
+          // display: none;
+          border-right: none;
         }
       }
       @include media-breakpoint-down(xl) {
