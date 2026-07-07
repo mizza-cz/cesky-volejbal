@@ -701,7 +701,17 @@
 					<div class="subPage-grid">
 						<div class="subPage-content w-100">
 							<h1 class="h1 mb-3">Ondřej Perušič</h1>
+
 							<div class="detailBox mb-4">
+								<div class="detailBox__header">
+									<h2 class="h4 mb-0">Žebříček mužů</h2>
+
+									<label class="detailBox__date">
+										<span>Body k datu:</span>
+										<input type="date" value="2026-02-21" />
+									</label>
+								</div>
+
 								<ul class="detailBox__list">
 									<li class="detailBox__item">
 										<div class="p1 fw-bold">Rok narození:</div>
@@ -714,7 +724,9 @@
 										</div>
 									</li>
 								</ul>
+
 								<hr />
+
 								<ul class="detailBox__list">
 									<li class="detailBox__item">
 										<div class="p1 fw-bold">Započítané body v žebříčku:</div>
@@ -724,8 +736,11 @@
 										<div class="p1 fw-bold">Celkové body v žebříčku:</div>
 										<p class="p1">3007.5</p>
 									</li>
-									<li class="detailBox__item">
-										<a href="#" class="link">Zobrazit žebříčky</a>
+
+									<li class="detailBox__item flex-column align-items-start">
+										<div class="p1 fw-bold">Žebříček mužů</div>
+
+										<a href="#" class="link"> Zobrazit žebříčky </a>
 									</li>
 								</ul>
 							</div>
@@ -739,14 +754,16 @@
 											<th class="text-center">Datum</th>
 											<th class="text-center">Umístění</th>
 											<th class="text-center">Body</th>
-
 											<th class="text-center">Kategorie</th>
 										</tr>
 									</thead>
+
 									<tbody>
 										<tr>
 											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">USN Halové mistrovství ČR</a>
+												<a href="#" class="fw-bold text-primary">
+													USN Halové mistrovství ČR
+												</a>
 											</td>
 											<td class="text-start">Praha (Strahov)</td>
 											<td class="text-center">21.2.2026</td>
@@ -801,7 +818,9 @@
 
 										<tr>
 											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">FIVB BPT Challenger</a>
+												<a href="#" class="fw-bold text-primary">
+													FIVB BPT Challenger
+												</a>
 											</td>
 											<td class="text-start">Alanya (TUR)</td>
 											<td class="text-center">11.6.2025</td>
@@ -821,7 +840,13 @@
 											<td class="text-center">Muži</td>
 										</tr>
 
-										<tr>
+										<tr class="tournament-divider">
+											<td colspan="6">
+												<span>Turnaje nezapočítané do celkových bodů</span>
+											</td>
+										</tr>
+
+										<tr class="is-after-divider">
 											<td class="text-start">
 												<a href="#" class="fw-bold text-primary">FIVB BPT Elite16</a>
 											</td>
@@ -832,9 +857,11 @@
 											<td class="text-center">Muži</td>
 										</tr>
 
-										<tr>
+										<tr class="is-after-divider">
 											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">FIVB BPT Challenger</a>
+												<a href="#" class="fw-bold text-primary">
+													FIVB BPT Challenger
+												</a>
 											</td>
 											<td class="text-start">Yucatan (MEX)</td>
 											<td class="text-center">19.3.2025</td>
@@ -843,7 +870,7 @@
 											<td class="text-center">Muži</td>
 										</tr>
 
-										<tr>
+										<tr class="is-after-divider">
 											<td class="text-start">
 												<a href="#" class="fw-bold text-primary">FIVB BPT Finals</a>
 											</td>
@@ -854,9 +881,11 @@
 											<td class="text-center">Muži</td>
 										</tr>
 
-										<tr>
+										<tr class="is-after-divider">
 											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">ČEZ Mistrovství ČR</a>
+												<a href="#" class="fw-bold text-primary">
+													ČEZ Mistrovství ČR
+												</a>
 											</td>
 											<td class="text-start">Praha (BK Ládví)</td>
 											<td class="text-center">30.8.2024</td>
@@ -864,53 +893,10 @@
 											<td class="text-center">150</td>
 											<td class="text-center">Muži</td>
 										</tr>
-
-										<tr>
-											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">FIVB BPT Future</a>
-											</td>
-											<td class="text-start">Brno (CZE)</td>
-											<td class="text-center">21.8.2024</td>
-											<td class="text-center">1</td>
-											<td class="text-center">250</td>
-											<td class="text-center">Muži</td>
-										</tr>
-
-										<tr>
-											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">Olympijské hry</a>
-											</td>
-											<td class="text-start">Paříž (FRA)</td>
-											<td class="text-center">27.7.2024</td>
-											<td class="text-center">9</td>
-											<td class="text-center">750</td>
-											<td class="text-center">Muži</td>
-										</tr>
-
-										<tr>
-											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">FIVB BPT Elite16</a>
-											</td>
-											<td class="text-start">Ostrava (CZE)</td>
-											<td class="text-center">5.6.2024</td>
-											<td class="text-center">9</td>
-											<td class="text-center">375</td>
-											<td class="text-center">Muži</td>
-										</tr>
-
-										<tr>
-											<td class="text-start">
-												<a href="#" class="fw-bold text-primary">FIVB BPT Challenge</a>
-											</td>
-											<td class="text-start">Stare Jablonki (POL)</td>
-											<td class="text-center">30.5.2024</td>
-											<td class="text-center">1</td>
-											<td class="text-center">500</td>
-											<td class="text-center">Muži</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
+
 							<nav aria-label="Další stránky">
 								<ul class="pagination d-flex flex-wrap pagination-flat pagination-success">
 									<li class="page-item active">
