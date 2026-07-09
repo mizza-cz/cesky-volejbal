@@ -1,7 +1,9 @@
 .archiveGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
   @include media-breakpoint-only(md) {
     grid-template-columns: repeat(2, 1fr);
   }
