@@ -203,18 +203,30 @@
         <div class="subPage-content">
           <div class="subPage-menu">
             <h1 class="h1">Fotogalerie</h1>
-            <form class="subPageFilter">
-              <label class="o-select subPageFilter__select">
-                <select class="js-select">
-                  <option>2025</option>
-                  <option>2024</option>
-                  <option>2023</option>
-                  <option>2022</option>
-                  <option>2021</option>
-                  <option>2020</option>
-                </select>
-              </label>
-            </form>
+            <div class="subPageFilter">
+              <form class="d-flex gap-3 flex-wrap">
+                <label class="o-select subPageFilter__select">
+                  <select class="js-select">
+                    <option>Všechny kategorie</option>
+                    <option>kategorie</option>
+                    <option>kategorie</option>
+                    <option>kategorie</option>
+                    <option>kategorie</option>
+                    <option>kategorie</option>
+                  </select>
+                </label>
+                <label class="o-select subPageFilter__select">
+                  <select class="js-select">
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                    <option>2020</option>
+                  </select>
+                </label>
+              </form>
+            </div>
           </div>
           <div class="archiveGrid">
             {% include "@components/post/postAlbum.twig" %} {% include
