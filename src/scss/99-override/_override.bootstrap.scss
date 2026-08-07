@@ -15,6 +15,9 @@
 .bg-line {
   background: var(--color-line);
 }
+.bg-primary {
+  background: var(--color-primary) !important;
+}
 
 .container {
   max-width: 1536px !important;
