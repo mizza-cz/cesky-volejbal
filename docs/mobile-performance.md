@@ -18,34 +18,34 @@ PNG/JPEG compression and responsive WebP generation run locally with Sharp; no T
 
 ## Changes
 
-- First homepage image and article image load eagerly with high fetch priority. Only the first slide receives high priority.
-- Slider images are visible without JavaScript. Full-size duplicate placeholder images and the image-load visibility gate were removed.
-- First homepage image and article image have generated WebP width variants and `sizes` matching their layouts. Other slider images retain lazy loading. The fourth slide's incorrect mobile image source was fixed.
-- Partner logos and banners have intrinsic dimensions; the main partner slot keeps its intended ratio on narrow screens.
-- FsLightbox is no longer included in the initial bundle. One shared library request starts on gallery activation alongside the JSON request. Failed loads can be retried, with a Czech error message. Relative JSON links work locally and under the GitHub Pages project path.
-- PurgeCSS scans original component/vendor JS to preserve runtime-generated selectors.
+-   First homepage image and article image load eagerly with high fetch priority. Only the first slide receives high priority.
+-   Slider images are visible without JavaScript. Full-size duplicate placeholder images and the image-load visibility gate were removed.
+-   First homepage image and article image have generated WebP width variants and `sizes` matching their layouts. Other slider images retain lazy loading. The fourth slide's incorrect mobile image source was fixed.
+-   Partner logos and banners have intrinsic dimensions; the main partner slot keeps its intended ratio on narrow screens.
+-   FsLightbox is no longer included in the initial bundle. One shared library request starts on gallery activation alongside the JSON request. Failed loads can be retried, with a Czech error message. Relative JSON links work locally and under the GitHub Pages project path.
+-   PurgeCSS scans original component/vendor JS to preserve runtime-generated selectors.
 
 ## Size comparison
 
 Compared with commit `bff96eed93fcdecd046dcfd59fdbdc0d05acfeb7`. Decimal bytes; gzip is calculated locally, not observed server transfer size.
 
-| Asset | Before | After |
-| --- | ---: | ---: |
-| Initial scripts.js | 205,603 | 156,087 |
-| Initial scripts.js, gzip | 59,710 | 43,885 |
-| styles.css | 84,127 | 83,906 |
-| First homepage photo | 499,958 (JPEG) | 85,386 (960px WebP) |
-| Article photo | 451,210 (PNG) | 53,706 (768px WebP) |
+| Asset                    |         Before |               After |
+| ------------------------ | -------------: | ------------------: |
+| Initial scripts.js       |        205,603 |             156,087 |
+| Initial scripts.js, gzip |         59,710 |              43,885 |
+| styles.css               |         84,127 |              83,906 |
+| First homepage photo     | 499,958 (JPEG) | 85,386 (960px WebP) |
+| Article photo            |  451,210 (PNG) | 53,706 (768px WebP) |
 
 The selected image size depends on viewport and device pixel ratio. JPEG/PNG fallback images remain available. Rebuilt fallback assets use a different local compressor, so their sizes differ from the previous TinyPNG output.
 
 ## Validation
 
-- Clean `npx gulp build` succeeds and outputs all 39 page templates.
-- Chromium checks at 390px and 1440px: homepage, article, extraliga programs, match detail, club detail, and referee documents. No page JavaScript exceptions or horizontal page overflow were observed.
-- Mobile navigation, slide controls, Select2 initialization, partner images after scrolling, and gallery opening were checked.
-- FsLightbox was absent before opening the gallery and available after opening it. The first hero image rendered with JavaScript disabled.
-- CDN access was unavailable in the test environment. Browser requests for jQuery 3.6.0 and Bootstrap 5.1.3 were fulfilled with the matching npm distributions. Gallery responses used local sample images to isolate UI behavior from the external placeholder image service.
+-   Clean `npx gulp build` succeeds and outputs all 39 page templates.
+-   Chromium checks at 390px and 1440px: homepage, article, extraliga programs, match detail, club detail, and referee documents. No page JavaScript exceptions or horizontal page overflow were observed.
+-   Mobile navigation, slide controls, Select2 initialization, partner images after scrolling, and gallery opening were checked.
+-   FsLightbox was absent before opening the gallery and available after opening it. The first hero image rendered with JavaScript disabled.
+-   CDN access was unavailable in the test environment. Browser requests for jQuery 3.6.0 and Bootstrap 5.1.3 were fulfilled with the matching npm distributions. Gallery responses used local sample images to isolate UI behavior from the external placeholder image service.
 
 ## Backend integration and remaining audit
 
