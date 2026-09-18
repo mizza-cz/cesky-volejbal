@@ -1,7 +1,14 @@
 <article class="article-section mt-lg-6">
   <div class="container">
     <div class="article-section__img">
-      <img src="images/content/article.png" loading="lazy" alt="article" />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="images/content/article-480.webp 480w, images/content/article-768.webp 768w, images/content/article-1080.webp 1080w, images/content/article-1440.webp 1440w"
+          sizes="(min-width: 1536px) 1496px, (min-width: 992px) calc(100vw - 40px), calc(100vw - 32px)"
+        />
+        <img src="images/content/article.png" width="1440" height="638" loading="eager" fetchpriority="high" alt="article" />
+      </picture>
     </div>
     <div class="article">
       <div class="article-content">

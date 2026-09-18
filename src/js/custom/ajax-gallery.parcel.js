@@ -1,57 +1,68 @@
-/**
- * Opens gallery
- * @param {Object} data
- */
-function openGallery(data, start) {
-  if (!data) return;
+// Load the gallery only when a visitor opens it.
+(function () {
+  let libraryRequest;
+  let opening = false;
 
-  const lightbox = new FsLightbox();
-  lightbox.props.sources = data;
-  lightbox.props.type = "image";
-  lightbox.props.showThumbsOnMount = true;
-  lightbox.open(start ?? 0);
-}
-
-/**
- * Get gallery
- * @param {Number} id
- * @param {String} source
- * @param {Number|undefined} start
- */
-async function fetchData(id, source, start) {
-  const url = new URL(window.location.origin + source);
-  url.searchParams.append("id", id);
-  start = start ? parseInt(start) : 0;
-
-  fetch(url, {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-  })
-    .then((response) => response.json())
-    .then((data) => openGallery(data, start))
-    .catch((err) => console.log(err));
-}
-
-/**
- * Gallery init
- * @param {Event} e
- */
-function init(e) {
-  e.preventDefault();
-
-  const button = e.target.closest("a[data-gallery-id]");
-  const id = button.getAttribute("data-gallery-id");
-  const source = button.getAttribute("data-source");
-  const start = button.getAttribute("data-start");
-
-  if (id && source) {
-    fetchData(parseInt(id), source, start);
+  function loadLibrary() {
+    if (window.FsLightbox) return Promise.resolve();
+    if (!libraryRequest) {
+      libraryRequest = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = galleryScriptUrl;
+        script.onload = () => {
+          if (window.FsLightbox) resolve();
+          else {
+            libraryRequest = null;
+            script.remove();
+            reject(new Error("Gallery library unavailable"));
+          }
+        };
+        script.onerror = () => {
+          libraryRequest = null;
+          script.remove();
+          reject(new Error("Gallery library unavailable"));
+        };
+        document.head.appendChild(script);
+      });
+    }
+    return libraryRequest;
   }
-}
 
-// Event handler and gallery init
-const galleryButtons = document.querySelectorAll("[data-gallery-id]");
+  document.addEventListener("click", async (event) => {
+    const button = event.target.closest("a[data-gallery-id][data-source]");
+    if (!button || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const id = button.dataset.galleryId;
+    const source = button.dataset.source;
+    if (!id || !source) return;
 
-for (const galleryButton of galleryButtons) {
-  galleryButton.addEventListener("click", init);
-}
+    event.preventDefault();
+    if (opening) return;
+    opening = true;
+    button.setAttribute("aria-busy", "true");
+
+    try {
+      const url = new URL(source, document.baseURI);
+      url.searchParams.set("id", id);
+      const [, data] = await Promise.all([
+        loadLibrary(),
+        fetch(url, { headers: { Accept: "application/json" } }).then((response) => {
+          if (!response.ok) throw new Error("Gallery request failed");
+          return response.json();
+        }),
+      ]);
+      if (!Array.isArray(data) || !data.length) throw new Error("Gallery is empty");
+      const lightbox = new window.FsLightbox();
+      lightbox.props.sources = data;
+      lightbox.props.type = "image";
+      lightbox.props.showThumbsOnMount = true;
+      const start = Number.parseInt(button.dataset.start, 10) || 0;
+      lightbox.open(Math.max(0, Math.min(start, data.length - 1)));
+    } catch (error) {
+      console.error(error);
+      window.alert("Galerii se nepodařilo načíst. Zkuste to prosím znovu.");
+    } finally {
+      opening = false;
+      button.removeAttribute("aria-busy");
+    }
+  });
+})();
