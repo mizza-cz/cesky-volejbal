@@ -416,6 +416,9 @@ async function copyImages() {
 async function responsiveImages() {
   const images = [
     { name: "topstory", source: "topstory.jpg", widths: [640, 960, 1440, 1920] },
+    { name: "nominace", source: "nominace.png", widths: [640, 960, 1440, 1920] },
+    { name: "post-3", source: "post-3.png", widths: [640, 960, 1440, 1920] },
+    { name: "post-2", source: "post-2.png", widths: [640, 960, 1440, 1920] },
     { name: "article", source: "article.png", widths: [480, 768, 1080, 1440] }
   ];
   await fs.ensureDir("build/images/content");
