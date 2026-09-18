@@ -1,22 +1,19 @@
 <div class="TopStories mb-6">
   <section class="TopStory js-topStory is-active" id="TP1">
-    <img
-      class="TopStory-imgPlaceholder js-topStory-imgPlaceholder is-active"
-      src="images/content/topstory.jpg"
-      width="150"
-      height="100"
-      alt=""
-    />
-
     <picture>
-      <source media="(max-width: 992px)" srcset="images/content/topstory.jpg" />
+      <source
+        type="image/webp"
+        srcset="images/content/topstory-640.webp 640w, images/content/topstory-960.webp 960w, images/content/topstory-1440.webp 1440w, images/content/topstory-1920.webp 1920w"
+        sizes="(max-width: 700px) 700px, 100vw"
+      />
       <img
         class="TopStory-img js-topStory-img"
         src="images/content/topstory.jpg"
-        width="1920"
-        height="1280"
+        width="2500"
+        height="2000"
         alt=""
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
       />
     </picture>
 
@@ -38,14 +35,6 @@
   </section>
 
   <section class="TopStory js-topStory" id="TP2">
-    <img
-      class="TopStory-imgPlaceholder js-topStory-imgPlaceholder is-active"
-      src="images/content/nominace.png"
-      width="150"
-      height="100"
-      alt=""
-    />
-
     <picture>
       <source media="(max-width: 992px)" srcset="images/content/nominace.png" />
       <img
@@ -75,14 +64,6 @@
   </section>
 
   <section class="TopStory js-topStory" id="TP3">
-    <img
-      class="TopStory-imgPlaceholder js-topStory-imgPlaceholder is-active"
-      src="images/content/post-3.png"
-      width="150"
-      height="100"
-      alt=""
-    />
-
     <picture>
       <source media="(max-width: 992px)" srcset="images/content/post-3.png" />
       <img
@@ -112,16 +93,8 @@
   </section>
 
   <section class="TopStory js-topStory" id="TP4">
-    <img
-      class="TopStory-imgPlaceholder js-topStory-imgPlaceholder is-active"
-      src="images/content/post-2.png"
-      width="150"
-      height="100"
-      alt=""
-    />
-
     <picture>
-      <source media="(max-width: 992px)" srcset="images/content/post-3.png" />
+      <source media="(max-width: 992px)" srcset="images/content/post-2.png" />
       <img
         class="TopStory-img js-topStory-img"
         src="images/content/post-2.png"
