@@ -1,5 +1,5 @@
 // Base gulpfile for Front-End Development
-// Working node v14.6.0
+// Node.js 20.3+
 // "gulp" basic command
 
 var gulp = require("gulp"),
@@ -14,7 +14,6 @@ var gulp = require("gulp"),
   cssnano = require("cssnano"),
   postcss = require("gulp-postcss"),
   emMediaQuery = require("postcss-em-media-query"),
-  replace = require("gulp-string-replace"),
   newer = require("gulp-newer"),
   tinypng = require("gulp-tinypng-compress"),
   svgo = require("gulp-svgo"),
@@ -31,19 +30,6 @@ var gulp = require("gulp"),
   twig = require("gulp-twig"),
   glob = require("glob"),
   plumber = require("gulp-plumber");
-
-// Datestamp for cache bursting
-var getStamp = function () {
-  var myDate = new Date();
-  var myYear = myDate.getFullYear().toString();
-  var myMonth = ("0" + (myDate.getMonth() + 1)).slice(-2);
-  var myDay = ("0" + myDate.getDate()).slice(-2);
-  var mySeconds = myDate.getSeconds().toString();
-  var myRandom = Math.floor(Math.random() * 100);
-  var myFullDate = myYear + myMonth + myDay + mySeconds + myRandom;
-  return myFullDate;
-};
-var cacheBursting = getStamp();
 
 //BrowserSync
 function browserSync(done) {
@@ -75,7 +61,7 @@ function browserSync(done) {
 }
 //BrowserSyncReload
 function browserSyncReload(done) {
-  browsersync.stream();
+  browsersync.reload();
   done();
 }
 //CSS
@@ -127,7 +113,7 @@ function css() {
     )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./build/css"))
-    .pipe(browsersync.stream());
+    .pipe(browsersync.stream({ match: "**/*.css" }));
 }
 //CSS print
 function cssPrint() {
@@ -151,8 +137,7 @@ function scripts() {
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("build/js"))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest("build/js"));
 }
 //Twig templates
 function twigTemplates() {
@@ -222,23 +207,6 @@ function indexInject() {
       })
     )
     .pipe(gulp.dest("build/"));
-}
-//CSS versions
-function cssVersions() {
-  cacheBursting = getStamp();
-  return gulp
-    .src(["./src/components/base/base.twig"])
-    .pipe(replace(/styles.css\?v=([0-9]*)/g, "styles.css?v=" + cacheBursting))
-    .pipe(replace(/prints.css\?v=([0-9]*)/g, "prints.css?v=" + cacheBursting))
-    .pipe(gulp.dest("./src/components/base/"));
-}
-//JS versions
-function jsVersions() {
-  cacheBursting = getStamp();
-  return gulp
-    .src(["./src/components/base/base.twig"])
-    .pipe(replace(/scripts.js\?v=([0-9]*)/g, "scripts.js?v=" + cacheBursting))
-    .pipe(gulp.dest("./src/components/base/"));
 }
 //tinyPNG
 function tinyPngImages() {
@@ -316,44 +284,39 @@ function htmlBeauty() {
   return gulp
     .src("build/" + "*.html")
     .pipe(htmlbeautify(options))
-    .pipe(gulp.dest("build/"))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest("build/"));
 }
 //Watch files
 function watchFiles() {
-  gulp.watch("src/static/**/*", staticAssets);
-  gulp.watch("src/layouts/*.json", layoutData);
+  gulp.watch("src/static/**/*", gulp.series(staticAssets, browserSyncReload));
+  gulp.watch("src/layouts/*.json", gulp.series(layoutData, browserSyncReload));
   gulp.watch(
     ["src/scss/**/*.scss", "src/components/**/*.scss"],
-    gulp.series(css, cssVersions, cssPrint)
+    gulp.series(css, cssPrint)
   );
   gulp.watch(
     ["src/js/**/*.js", "src/components/**/*.js"],
-    gulp.series(scripts, galleryVendor, jsVersions, css, cssVersions)
+    gulp.series(scripts, galleryVendor, css, browserSyncReload)
   );
   gulp.watch(
     ["src/layouts/*.twig", "src/components/**/*.{twig,json}"],
-    gulp.series(twigTemplates, htmlBeauty, css, cssVersions)
+    gulp.series(twigTemplates, htmlBeauty, css, indexInject, browserSyncReload)
   );
-  gulp.watch(["src/layouts/*.twig"], indexInject);
-  gulp.watch(
-    ["build/css/*.css", "build/*.html", "build/js/*.js"],
-    gulp.series(browserSyncReload)
-  );
+  // Watch source files only; reload after their build pipeline finishes.
   gulp
-    .watch("src/images/**/*.{png,jpg}", gulp.series(copyImages, responsiveImages))
+    .watch("src/images/**/*.{png,jpg}", gulp.series(copyImages, responsiveImages, browserSyncReload))
     .on("unlink", function (filepath) {
       var filePathFromSrc = path.relative(path.resolve("src/images"), filepath);
       var destFilePath = path.resolve("build/images", filePathFromSrc);
       del.sync(destFilePath);
     });
-  gulp.watch("src/images/**/*.svg", svgMin).on("unlink", function (filepath) {
+  gulp.watch("src/images/**/*.svg", gulp.series(svgMin, browserSyncReload)).on("unlink", function (filepath) {
     var filePathFromSrc = path.relative(path.resolve("src/images"), filepath);
     var destFilePath = path.resolve("build/images", filePathFromSrc);
     del.sync(destFilePath);
   });
   gulp
-    .watch("src/favicon/*.{png,jpg}", copyFavicons)
+    .watch("src/favicon/*.{png,jpg}", gulp.series(copyFavicons, browserSyncReload))
     .on("unlink", function (filepath) {
       var filePathFromSrc = path.relative(
         path.resolve("src/favicon"),
@@ -363,7 +326,7 @@ function watchFiles() {
       del.sync(destFilePath);
     });
   gulp
-    .watch(["src/favicon/*", "!src/favicon/*.{png,jpg,svg}"], faviconsFiles)
+    .watch(["src/favicon/*", "!src/favicon/*.{png,jpg,svg}"], gulp.series(faviconsFiles, browserSyncReload))
     .on("unlink", function (filepath) {
       var filePathFromSrc = path.relative(
         path.resolve("src/favicon"),
@@ -373,7 +336,7 @@ function watchFiles() {
       del.sync(destFilePath);
     });
   gulp
-    .watch("src/favicon/*.svg", svgMinFavicon)
+    .watch("src/favicon/*.svg", gulp.series(svgMinFavicon, browserSyncReload))
     .on("unlink", function (filepath) {
       var filePathFromSrc = path.relative(
         path.resolve("src/favicon"),
@@ -382,7 +345,7 @@ function watchFiles() {
       var destFilePath = path.resolve("build/favicon", filePathFromSrc);
       del.sync(destFilePath);
     });
-  gulp.watch("src/fonts/**", copyFonts).on("unlink", function (filepath) {
+  gulp.watch("src/fonts/**", gulp.series(copyFonts, browserSyncReload)).on("unlink", function (filepath) {
     var filePathFromSrc = path.relative(path.resolve("src/fonts"), filepath);
     var destFilePath = path.resolve("build/fonts", filePathFromSrc);
     del.sync(destFilePath);
