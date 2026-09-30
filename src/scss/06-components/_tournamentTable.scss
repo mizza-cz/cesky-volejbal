@@ -1,7 +1,8 @@
 .tournamentTable {
-  @include media-breakpoint-down(lg) {
-    overflow-x: auto;
-  }
+  overflow-x: auto;
+  // @include media-breakpoint-down(lg) {
+  //   overflow-x: auto;
+  // }
   width: 100%;
   table {
     width: 100%;

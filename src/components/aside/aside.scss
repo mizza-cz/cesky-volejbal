@@ -13,6 +13,7 @@
 
 .asideMenu {
   width: 22.8rem;
+  min-width: 22.8rem;
   background-color: var(--color-light);
 
   @include media-breakpoint-down(xl) {
