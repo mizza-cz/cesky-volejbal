@@ -61,25 +61,6 @@
     startAutoplay();
   };
 
-  document.querySelectorAll(".js-topStory-img").forEach((img) => {
-    if (img.complete) {
-      img.classList.add("is-active");
-      img
-        .closest(".js-topStory")
-        ?.querySelector(".js-topStory-imgPlaceholder")
-        ?.classList.remove("is-active");
-      return;
-    }
-
-    img.addEventListener("load", () => {
-      img.classList.add("is-active");
-      img
-        .closest(".js-topStory")
-        ?.querySelector(".js-topStory-imgPlaceholder")
-        ?.classList.remove("is-active");
-    });
-  });
-
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
       changeSlide(index);
