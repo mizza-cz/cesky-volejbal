@@ -1,24 +1,54 @@
 .tournamentTable {
-  overflow-x: auto;
-  // @include media-breakpoint-down(lg) {
-  //   overflow-x: auto;
-  // }
   width: 100%;
+  overflow-x: auto;
+
   table {
     width: 100%;
     color: var(--color-primary);
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+
     @include media-breakpoint-down(lg) {
       min-width: max-content;
     }
   }
+
   th,
   td {
-    text-align: center;
-    border: 1px solid var(--color-line);
     padding: 16px 20px;
+    text-align: center;
+    border: 0;
+    border-right: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+
     @include media-breakpoint-down(xl) {
-      padding: 16px 16px;
+      padding: 16px;
     }
+  }
+
+  thead > tr:first-child > th {
+    border-top: 1px solid var(--color-line);
+  }
+
+  tr > :first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: #fff;
+    border-left: 1px solid var(--color-line);
+  }
+
+  thead > tr > :first-child {
+    z-index: 3;
+  }
+
+  tr > .bg-line:first-child {
+    background-color: var(--color-line);
+  }
+
+  thead > tr:first-child > th:last-child,
+  thead > tr:last-child > th:nth-last-child(2),
+  tbody > tr > td:nth-last-child(2) {
+    border-left: 2px solid #000;
   }
 }
