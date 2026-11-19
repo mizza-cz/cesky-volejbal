@@ -64,6 +64,7 @@
 
     gap: 16px;
     line-height: 80%;
+    align-items: center;
     @include media-breakpoint-down(lg) {
       flex-direction: column;
       gap: 8px;
