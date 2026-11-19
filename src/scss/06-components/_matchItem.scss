@@ -50,10 +50,13 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
     img {
       width: 48px;
       height: 48px;
       object-fit: contain;
+      min-width: 48px;
+      flex-shrink: 0;
     }
   }
   .h2 {
@@ -90,9 +93,9 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    max-width: 14rem;
+    max-width: 10rem;
     width: 100%;
-    min-width: 14rem;
+    min-width: 10rem;
     color: var(--color-primary);
     @include media-breakpoint-down(lg) {
       max-width: 100%;
