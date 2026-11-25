@@ -1,14 +1,18 @@
 document.querySelectorAll(".playoff").forEach((playoff) => {
   const board = playoff.querySelector(".playoff__board");
   const svg = playoff.querySelector(".playoff__lines");
+  const scroll = playoff.querySelector(".playoff__scroll");
   const series = [...playoff.querySelectorAll("[data-id]")];
+  const seriesList = [...playoff.querySelectorAll(".playoff__series")];
 
-  if (!board || !svg || !series.length) return;
+  if (!board || !svg || !scroll || !series.length) return;
 
   const ns = "http://www.w3.org/2000/svg";
   const seriesMap = new Map(series.map((item) => [item.dataset.id, item]));
+  const activeDropdowns = new Map();
 
   let frame = null;
+  let dropdownFrame = null;
 
   function getSummary(item) {
     return item?.querySelector(".playoff__summary");
@@ -49,7 +53,6 @@ document.querySelectorAll(".playoff").forEach((playoff) => {
     const thirdRect = third.getBoundingClientRect();
 
     const groupCenter = (finalRect.top + thirdRect.bottom) / 2;
-
     const offset = semifinalCenter - groupCenter;
 
     finalBody.style.transform = `translateY(${offset}px)`;
@@ -98,8 +101,6 @@ document.querySelectorAll(".playoff").forEach((playoff) => {
       if (!sources.length) return;
 
       const middleX = (sources[0].x + target.x) / 2;
-      const joinY =
-        sources.reduce((sum, point) => sum + point.y, 0) / sources.length;
 
       let d = "";
 
@@ -119,6 +120,8 @@ document.querySelectorAll(".playoff").forEach((playoff) => {
 
       svg.appendChild(path);
     });
+
+    updateAllDropdowns();
   }
 
   function scheduleDraw() {
@@ -136,14 +139,83 @@ document.querySelectorAll(".playoff").forEach((playoff) => {
     });
   }
 
-  playoff.querySelectorAll(".playoff__series").forEach((item) => {
+  function updateDropdownPosition(item) {
+    const data = activeDropdowns.get(item);
+
+    if (!data) return;
+
+    const rect = item.getBoundingClientRect();
+    const matches = data.matches;
+
+    matches.style.top = `${rect.bottom + window.scrollY + 6}px`;
+    matches.style.left = `${rect.left + window.scrollX}px`;
+    matches.style.width = `${rect.width}px`;
+  }
+
+  function updateAllDropdowns() {
+    activeDropdowns.forEach((data, item) => {
+      updateDropdownPosition(item);
+    });
+  }
+
+  function scheduleDropdownUpdate() {
+    if (dropdownFrame !== null) return;
+
+    dropdownFrame = requestAnimationFrame(() => {
+      dropdownFrame = null;
+      updateAllDropdowns();
+    });
+  }
+
+  function restoreDropdown(item) {
+    const data = activeDropdowns.get(item);
+
+    if (!data) return;
+
+    data.placeholder.replaceWith(data.matches);
+
+    data.matches.classList.remove("is-floating");
+    data.matches.removeAttribute("style");
+
+    activeDropdowns.delete(item);
+  }
+
+  function openDropdown(item) {
+    if (activeDropdowns.has(item)) return;
+
+    const matches = item.querySelector(".playoff__matches");
+
+    if (!matches) return;
+
+    const placeholder = document.createComment("playoff matches");
+
+    matches.replaceWith(placeholder);
+
+    document.body.appendChild(matches);
+
+    matches.classList.add("is-floating");
+
+    activeDropdowns.set(item, {
+      matches,
+      placeholder,
+    });
+
+    updateDropdownPosition(item);
+  }
+
+  seriesList.forEach((item) => {
     item.addEventListener("toggle", () => {
       if (item.open) {
-        playoff.querySelectorAll(".playoff__series[open]").forEach((other) => {
-          if (other !== item) {
+        seriesList.forEach((other) => {
+          if (other !== item && other.open) {
             other.open = false;
+            restoreDropdown(other);
           }
         });
+
+        openDropdown(item);
+      } else {
+        restoreDropdown(item);
       }
 
       updateActiveRounds();
@@ -152,15 +224,38 @@ document.querySelectorAll(".playoff").forEach((playoff) => {
   });
 
   document.addEventListener("click", (event) => {
-    if (playoff.contains(event.target)) return;
+    const clickedInsidePlayoff = playoff.contains(event.target);
 
-    playoff.querySelectorAll(".playoff__series[open]").forEach((item) => {
-      item.open = false;
+    const clickedInsideDropdown = [...activeDropdowns.values()].some(
+      ({ matches }) => matches.contains(event.target)
+    );
+
+    if (clickedInsidePlayoff || clickedInsideDropdown) return;
+
+    seriesList.forEach((item) => {
+      if (item.open) {
+        item.open = false;
+        restoreDropdown(item);
+      }
     });
+
+    updateActiveRounds();
+  });
+
+  scroll.addEventListener("scroll", scheduleDropdownUpdate, {
+    passive: true,
+  });
+
+  window.addEventListener("resize", () => {
+    scheduleDraw();
+    scheduleDropdownUpdate();
   });
 
   if ("ResizeObserver" in window) {
-    const observer = new ResizeObserver(scheduleDraw);
+    const observer = new ResizeObserver(() => {
+      scheduleDraw();
+      scheduleDropdownUpdate();
+    });
 
     observer.observe(board);
 
@@ -173,10 +268,11 @@ document.querySelectorAll(".playoff").forEach((playoff) => {
     });
   }
 
-  window.addEventListener("resize", scheduleDraw);
-
   if (document.fonts) {
-    document.fonts.ready.then(scheduleDraw);
+    document.fonts.ready.then(() => {
+      scheduleDraw();
+      scheduleDropdownUpdate();
+    });
   }
 
   updateActiveRounds();
